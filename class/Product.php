@@ -15,6 +15,9 @@
     protected $category;
 
     /** @var string */
+    protected $measurements;
+
+    /** @var string */
     protected $productDescription;
 
     /** @var string */
@@ -92,6 +95,23 @@
         $this->category = $category;
     }
 
+    /**
+     * Product measurements getter
+     * @return string
+     */
+    public function getMeasurements(): string
+    {
+        return $this->measurements;
+    }
+    /**
+     * @param string $measurements
+     */
+    public function setMeasurements(string $measurements): void
+    {
+        $this->measurements = $measurements;
+    }
+    
+
     
     /**
      * Product description getter
@@ -156,6 +176,7 @@
         $this->setName($data['name']);
         $this->setPrice($data['price']);
         $this->setCategory($data['category']);
+        $this->setMeasurements($data['measurements']);
         $this->setProductDescription($data['productDescription']);
         $this->setImage($data['image']);
         $this->setImageDescription($data['imageDescription']);

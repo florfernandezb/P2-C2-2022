@@ -30,9 +30,9 @@ function getProductListFromJson(): array {
  */
 function getProductId(int $id): ?Product {
     $productList = getProductListFromJson();
-
     foreach($productList as $product) {
         if($product->getProductId() === $id) {
+            
             return $product;
         }
     }
