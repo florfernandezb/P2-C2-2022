@@ -39,10 +39,28 @@ if(!isset($routes[$view])) {
                 <li class="open"><a href="#nav">Abrir</a></li>
                 <li class="close"><a href="#">Cerrar</a></li>
             </ul>    
-            <ul id="menu">
-                <li ><a  href="index.php?s=home">Home</a></li>
-                <li ><a  href="index.php?s=productList">Productos</a></li>
+            <ul id="menu" class="navbar-bar">
+                <li ><a  href="index.php?s=home" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ><a class=  #">Bowls</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Fuentes</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Macetas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Mates</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Platos</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Tazas</a></li>
+                    </ul>
+                </li>
                 <li ><a  href="index.php?s=formContacto">Contacto</a></li>
+                <li ><a  href="index.php?s=datos">Datos de las alumnas</a></li>
             </ul>
         </nav>
     </header>
@@ -52,7 +70,7 @@ if(!isset($routes[$view])) {
     <footer>
         <p>Este sitio es un trabajo práctico para la materia Programación II del tercer cuatrimestre de la Escuela Da Vinci. </p>
         <p>Florencia Fernández Bugna | Manuela Jaureguialzo</p>
-        <p>&copy; Da Vinci - 2021</p>
+        <p>&copy; Da Vinci - 2022</p>
     </footer>
 </body>
 </html>

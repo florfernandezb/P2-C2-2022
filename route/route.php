@@ -24,5 +24,8 @@ function getRoutesSitio() {
         'gracias' => [
             'title' => 'Gracias por tu consulta',
         ],
+        'datos' => [
+            'title' => 'Datos de las alumnas'
+        ]
     ];
 }
