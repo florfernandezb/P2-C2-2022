@@ -39,24 +39,22 @@ if(!isset($routes[$view])) {
                 <li class="open"><a href="#nav">Abrir</a></li>
                 <li class="close"><a href="#">Cerrar</a></li>
             </ul>    
-            <ul id="menu" class="navbar-bar">
+            <ul id="menu" class="navbar">
                 <li ><a  href="index.php?s=home" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Productos
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li ><a class=  #">Bowls</a></li>
+                <li class="dropdownmenu">
+                    <button class="dropbtn">Productos</button>
+                    <ul class="dropdown-content">
+                        <li ><a href="#">Bowls</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Fuentes</a></li>
+                        <li><a href="#">Fuentes</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Macetas</a></li>
+                        <li><a href="#">Macetas</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Mates</a></li>
+                        <li><a href="#">Mates</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Platos</a></li>
+                        <li><a href="#">Platos</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Tazas</a></li>
+                        <li><a href="#">Tazas</a></li>
                     </ul>
                 </li>
                 <li ><a  href="index.php?s=formContacto">Contacto</a></li>
