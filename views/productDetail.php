@@ -6,17 +6,20 @@ $product = getProductId($productId);
 $productCategory = $product->getCategory();
 $productImage = $product->getImage();
 ?>
-<main>
-    <section class="product-details">
-        <picture class="img-prod">
+<main class="container">
+    <section class="product-details row">
+        <picture class="img-prod col-6">
             <source srcset="<?= './res/'. $productCategory .'/'. $productImage . '.png';?>" media="(max-width:480px)">
             <img src="<?= './res/'. $productCategory .'/'. $productImage . '.png';?>" alt="<?= $product->getImageDescription();?>">
         </picture>
             
-        <div class="prod-details">
+        <div class="prod-details col-6">
             <h2><?= $product->getName();?></h2>
             <p>Precio: $<?= $product->getPrice();?></p>
             <p>Descripcion: <?= $product->getProductDescription();?></p>    
         </div>
     </section>
+    <div class="row">
+        <a class="back col-12" href="index.php">Volver a productos</a>
+    </div>
 </main>

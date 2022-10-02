@@ -239,6 +239,14 @@ legend {
     margin-right: unset !important;
 }
 
+.back {
+    text-align: center;
+    text-decoration: none;
+    color: #16001e;
+    text-align: center;
+    font-size: 1.2em;
+}
+
 @media screen and (min-width: 1400px) {
     .about p{
         width: 80%;
