@@ -125,15 +125,19 @@ header div h1 a{
 
 .dropdown-content{
     display: none;
+    width: 25%;
     position: absolute;
     background-color: #8d524b;
     z-index: 1;
+    padding: 10px;
+    justify-content: center;
 }
 
 .dropdown-content a{
     float: none;
-    display: block;
+    display: inline-block;
     text-align: left;
+    padding: 5px;
 }
 
 .dropdown-content a:hover {
@@ -141,7 +145,8 @@ header div h1 a{
 }
 
 .dropdownmenu:hover .dropdown-content{
-    display: block;
+    display: inline-block;
+    
 }
 
 .product-card picture img {
