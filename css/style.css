@@ -112,6 +112,43 @@ header div h1 a{
     color: #8d524b;
 }
 
+.dropdownmenu{
+    float: left;
+    overflow: hidden;
+}
+
+.dropdownmenu .dropbtn{
+    border: none;
+    outline: none;
+    margin: 0;
+}
+
+.dropdown-content{
+    display: none;
+    width: 25%;
+    position: absolute;
+    background-color: #8d524b;
+    z-index: 1;
+    padding: 10px;
+    justify-content: center;
+}
+
+.dropdown-content a{
+    float: none;
+    display: inline-block;
+    text-align: left;
+    padding: 5px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f3cec7;
+}
+
+.dropdownmenu:hover .dropdown-content{
+    display: inline-block;
+    
+}
+
 .product-card picture img {
     margin-top: 1.5em;
 }

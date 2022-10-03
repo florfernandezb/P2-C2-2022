@@ -2,6 +2,12 @@
 
 require_once __DIR__ . '/../framework/jsonProductsReader.php';
 $productList = getProductListFromJson();
+
+if (isset($_GET['category'])) {
+    $productsFilteredByCategories = getProductsByCategory($_GET['category']);
+    $productList = $productsFilteredByCategories;
+}
+
 ?>
 <main>
     <section id="product-list">
@@ -9,7 +15,6 @@ $productList = getProductListFromJson();
         <div class="row ">
             <?php
                 foreach($productList as $product): 
-            
                 $productCategory = $product->getCategory();
                 $productImage = $product->getImage();
                 ?>
