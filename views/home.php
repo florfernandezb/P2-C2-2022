@@ -1,6 +1,6 @@
 <main>
-    <h2>Sobre mí</h2>
     <section class="container_home">
+        <h2>Sobre mí</h2>
         <div class="about">
             <p>¿Alguna vez quisieron tener una marca propia o su propio emprendimiento? ¡Yo sí! 
                 Soñé mucho tiempo con tener mi marca de vestidos, pero nunca le puse lo suficiente de mí para lograrlo. Siempre ponía alguna excusa para empezarlo. Más allá de eso, quería tener algo propio, 100% hecho por mí. 
