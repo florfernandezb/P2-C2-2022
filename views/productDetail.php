@@ -5,6 +5,7 @@ $product = getProductId($productId);
 
 $productCategory = $product->getCategory();
 $productImage = $product->getImage();
+
 ?>
 <main class="container">
     <section class="product-details row">
@@ -17,9 +18,10 @@ $productImage = $product->getImage();
             <h2><?= $product->getName();?></h2>
             <p>Precio: $<?= $product->getPrice();?></p>
             <p>Descripcion: <?= $product->getProductDescription();?></p>    
+            <p>Disponible a partir de: <?= $product->getDate();?></p>    
         </div>
     </section>
     <div class="row">
-        <a class="back col-12" href="index.php">Volver a productos</a>
+        <a class="back col-12" href="index.php?s=productList">Volver a productos</a>
     </div>
 </main>

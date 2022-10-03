@@ -5,9 +5,10 @@
         "price": 780,
         "category": "bowls",
         "measurements": "16,5 de diámetro por 5,5 cm de alto",
-        "productDescription": "Bowl Kekko \nMedidas: 16,5 de diámetro por 5,5 cm de alto (pueden variar por ser productos hechos a mano). \n*Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \nApta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Bowl Kekko </br> Medidas: 16,5 de diámetro por 5,5 cm de alto (pueden variar por ser productos hechos a mano). </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "bowlKekko",
-        "imageDescription": "Bowl Kekko color: negro gris y blanco de medidas 16,5cm de diamentro por 5,5cm de alto"
+        "imageDescription": "Bowl Kekko color: negro gris y blanco de medidas 16,5cm de diamentro por 5,5cm de alto",
+        "availableDate": "28/01/2023"
     },
     {
         "id": 1,
@@ -15,9 +16,10 @@
         "price": 1000,
         "category": "tazas",
         "measurements": "9,5 de diametro por 9 de alto",
-        "productDescription": "Taza Barna \nMedidas: 9,5 de diametro por 9 de alto (pueden variar por ser productos hechos a mano). \n*Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \nApta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Taza Barna </br> Medidas: 9,5 de diametro por 9 de alto (pueden variar por ser productos hechos a mano). </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "tazaBarna",
-        "imageDescription": "Taza Barna color beige, de medidas 9,5 de diametro por 9 de alto"
+        "imageDescription": "Taza Barna color beige, de medidas 9,5 de diametro por 9 de alto",
+        "availableDate": "09/03/2023"
     },
     {
         "id": 2,
@@ -25,9 +27,10 @@
         "price": 1400,
         "category": "fuentes",
         "measurements": "23 de diámetro por 4 cm de alto",
-        "productDescription": "Fuente/Plato Kekko. \nMedidas: 23 de diámetro por 4 cm de alto (pueden variar por ser productos hechos a mano). \n *Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \n Apta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Fuente/Plato Kekko. </br> Medidas: 23 de diámetro por 4 cm de alto (pueden variar por ser productos hechos a mano). </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "fuenteKekko",
-        "imageDescription": "Fuente Kekko color: negro gris y blanco, de medidas 23 de diámetro por 4 cm de alto"
+        "imageDescription": "Fuente Kekko color: negro gris y blanco, de medidas 23 de diámetro por 4 cm de alto",
+        "availableDate": "14/10/2022"
     },
     {
         "id": 3,
@@ -35,9 +38,10 @@
         "price": 980,
         "category": "bowls",
         "measurements": "16,5 de diámetro por 5,5 de alto",
-        "productDescription": "Fuente Mateo \nMedidas: 16,5 de diámetro por 5,5 de alto (pueden variar por ser productos hechos a mano). \n *Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia!\n Apta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Fuente Mateo </br> Medidas: 16,5 de diámetro por 5,5 de alto (pueden variar por ser productos hechos a mano). </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "bowlMateo",
-        "imageDescription": "Fuente Mateo color: negro gris y blanco, de medidas 16,5 de diámetro por 5,5 de alto"
+        "imageDescription": "Fuente Mateo color: negro gris y blanco, de medidas 16,5 de diámetro por 5,5 de alto",
+        "availableDate": "23/11/2022"
     },
     {
         "id": 4,
@@ -45,9 +49,10 @@
         "price": 700,
         "category": "tazas",
         "measurements": "7,5 de diametro por 9,5 cm de alto",
-        "productDescription": "Taza Laura \nMedidas: 7,5 de diametro por 9,5 cm de alto (pueden variar por ser productos hechos a mano). \n *Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia!\n Apta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Taza Laura </br> Medidas: 7,5 de diametro por 9,5 cm de alto (pueden variar por ser productos hechos a mano). </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "tazaLaura",
-        "imageDescription": "Taza Laura color: beige y negro de medidas 16,5 de diámetro por 5,5 de alto"
+        "imageDescription": "Taza Laura color: beige y negro de medidas 16,5 de diámetro por 5,5 de alto",
+        "availableDate": "10/01/2023"
     },
     {
         "id": 5,
@@ -55,9 +60,10 @@
         "price": 530,
         "category": "mates",
         "measurements": "7,5 de diametro por 9,5 cm de alto",
-        "productDescription": "Mate/Vaso Martha \nMedidas: 7,5 de diámetro por 9cm de alto (pueden variar por ser productos hechos a mano). \n*Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \nApta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Mate/Vaso Martha </br> Medidas: 7,5 de diámetro por 9cm de alto (pueden variar por ser productos hechos a mano). </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "mateMartha",
-        "imageDescription": "Fuente Meneca color blanco de medidas 7,5 de diámetro por 9cm de alto"
+        "imageDescription": "Fuente Meneca color blanco de medidas 7,5 de diámetro por 9cm de alto",
+        "availableDate": "06/12/2022"
     },
     {
         "id": 6,
@@ -65,9 +71,10 @@
         "price": 3000,
         "category": "bowls",
         "measurements": "19 cm diametro por 9 de alto",
-        "productDescription": "Bowl Boe \nMedidas: 19 cm diametro por 9 de alto (pueden variar por ser productos hechos a mano) \n*Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \nApta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Bowl Boe </br> Medidas: 19 cm diametro por 9 de alto (pueden variar por ser productos hechos a mano) </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "bowlBoe",
-        "imageDescription": "Bowl Boe color blanco y crema de medidas 19 cm diametro por 9 de alto"
+        "imageDescription": "Bowl Boe color blanco y crema de medidas 19 cm diametro por 9 de alto",
+        "availableDate": "28/08/2023"
     },
     {
         "id": 7,
@@ -75,9 +82,10 @@
         "price": 2800,
         "category": "bowls",
         "measurements": "19 cm diametro por 9 de alto",
-        "productDescription": "Bowl Eugenia \nMedidas:  19 cm de diámetro por 9 cm de alto (pueden variar por ser productos hechos a mano) \n*Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \nApta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Bowl Eugenia </br> Medidas:  19 cm de diámetro por 9 cm de alto (pueden variar por ser productos hechos a mano) </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "bowlEugenia",
-        "imageDescription": "Bowl Eugenia color negro blanco y gris de medidas  19 cm de diámetro por 9 cm de alto"
+        "imageDescription": "Bowl Eugenia color negro blanco y gris de medidas  19 cm de diámetro por 9 cm de alto",
+        "availableDate": "23/04/2022"
     },
     {
         "id": 8,
@@ -85,9 +93,10 @@
         "price": 2800,
         "category": "bowls",
         "measurements": "13 cm de diámetro por 6,5 de alto",
-        "productDescription": "Bowl Madelaine \nMedidas:  13 cm de diámetro por 6,5 de alto (pueden variar por ser productos hechos a mano) \n*Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \nApta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Bowl Madelaine </br> Medidas:  13 cm de diámetro por 6,5 de alto (pueden variar por ser productos hechos a mano) </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "bowlMadelaine",
-        "imageDescription": "Bowl Madelaine color negro blanco y gris de medidas  13 cm de diámetro por 6,5 de alto"
+        "imageDescription": "Bowl Madelaine color negro blanco y gris de medidas  13 cm de diámetro por 6,5 de alto",
+        "availableDate": "16/03/2023"
     },
     {
         "id": 9,
@@ -95,9 +104,10 @@
         "price": 3000,
         "category": "fuentes",
         "measurements": "21,5 de diámetro por 7 cm de alto",
-        "productDescription": "Fuente Edith \nMedidas:  21,5 de diámetro por 7 cm de alto (pueden variar por ser productos hechos a mano) \n*Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \nApta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Fuente Edith </br> Medidas:  21,5 de diámetro por 7 cm de alto (pueden variar por ser productos hechos a mano) </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "fuenteEdith",
-        "imageDescription": "Fuente Edith color negro blanco y gris de medidas  21,5 de diámetro por 7 cm de alto"
+        "imageDescription": "Fuente Edith color negro blanco y gris de medidas  21,5 de diámetro por 7 cm de alto",
+        "availableDate": "25/11/2022"
     },
     {
         "id": 10,
@@ -105,9 +115,10 @@
         "price": 3000,
         "category": "fuentes",
         "measurements": "21,5 de diámetro por 7 cm de alto",
-        "productDescription": "Fuente Meneca \nMedidas:  21,5 de diámetro por 7 cm de alto (pueden variar por ser productos hechos a mano) \n*Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \nApta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Fuente Meneca </br> Medidas:  21,5 de diámetro por 7 cm de alto (pueden variar por ser productos hechos a mano) </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "fuenteMeneca",
-        "imageDescription": "Fuente Meneca color blanco y crema de medidas  21,5 de diámetro por 7 cm de alto"
+        "imageDescription": "Fuente Meneca color blanco y crema de medidas  21,5 de diámetro por 7 cm de alto",
+        "availableDate": "04/07/2023"
     },
     {
         "id": 11,
@@ -115,9 +126,10 @@
         "price": 1800,
         "category": "platos",
         "measurements": "24 cm de diámetro",
-        "productDescription": "Plato Lupe \nMedidas:  24 cm de diámetro (pueden variar por ser productos hechos a mano) \n*Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \nApta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Plato Lupe </br> Medidas:  24 cm de diámetro (pueden variar por ser productos hechos a mano) </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "platoLupe",
-        "imageDescription": "Plato Lupe color blanco y pintitas negras de medidas  24 cm de diámetro"
+        "imageDescription": "Plato Lupe color blanco y pintitas negras de medidas  24 cm de diámetro",
+        "availableDate": "17/05/2023"
     },
     {
         "id": 12,
@@ -125,9 +137,10 @@
         "price": 1200,
         "category": "mates",
         "measurements": "10,5 de diámetro por 8 cm de alto",
-        "productDescription": "Mate Lucas \nMedidas:  10,5 de diámetro por 8 cm de alto (pueden variar por ser productos hechos a mano) \n*Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \nApta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Mate Lucas </br> Medidas:  10,5 de diámetro por 8 cm de alto (pueden variar por ser productos hechos a mano) </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "mateLucas",
-        "imageDescription": "Mate Lucas color blanco y crema de medidas  10,5 de diámetro por 8 cm de alto"
+        "imageDescription": "Mate Lucas color blanco y crema de medidas  10,5 de diámetro por 8 cm de alto",
+        "availableDate": "30/11/2022"
     },
     {
         "id": 13,
@@ -135,9 +148,10 @@
         "price": 1200,
         "category": "macetas",
         "measurements": "12 cm de diámetro por15 cm de alto",
-        "productDescription": "Maceta Nanu \nMedidas:  12 cm de diámetro por15 cm de alto (pueden variar por ser productos hechos a mano) \n*Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \nApta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Maceta Nanu </br> Medidas:  12 cm de diámetro por15 cm de alto (pueden variar por ser productos hechos a mano) </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! </br> <em>Apta para horno a gas, horno electrico y microondas.</em>",
         "image": "macetaNanu",
-        "imageDescription": "Maceta Nanu color blanco y gris de medidas  12 cm de diámetro por15 cm de alto"
+        "imageDescription": "Maceta Nanu color blanco y gris de medidas  12 cm de diámetro por15 cm de alto",
+        "availableDate": "01/01/2023"
     },
     {
         "id": 14,
@@ -145,8 +159,9 @@
         "price": 1200,
         "category": "macetas",
         "measurements": "12 cm de diámetro por 20 cm de alto",
-        "productDescription": "Maceta Florencia \nMedidas:  12 cm de diámetro por 20 cm de alto, diámetro de boca 8 cm (pueden variar por ser productos hechos a mano) \n*Cada pieza que hago es única e irrepetible en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia! \nApta para horno a gas, horno electrico y microondas.",
+        "productDescription": "Maceta Florencia </br> Medidas:  12 cm de diámetro por 20 cm de alto, diámetro de boca 8 cm (pueden variar por ser productos hechos a mano) </br> *Cada pieza que hago es <strong>única e irrepetible</strong> en su esmaltado. Los colores combinados pueden ser similares, pero nunca van a ser iguales. ¡Esa es la magia!  </br><em>Apta para horno a gas, horno electrico y microondas.</em>",   
         "image": "MacetaFlorencia",
-        "imageDescription": "Maceta Florencia color negro blanco y gris de medidas  12 cm de diámetro por 20 cm de alto, diámetro de boca 8 cm"
+        "imageDescription": "Maceta Florencia color negro blanco y gris de medidas  12 cm de diámetro por 20 cm de alto, diámetro de boca 8 cm",
+        "availableDate": "09/03/2023"
     }
 ]

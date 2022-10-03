@@ -26,6 +26,9 @@
     /** @var string */
     protected $imageDescription;
 
+    /** @var string */
+    protected $availableDate;
+
     /**
      * Product id getter 
      * @return int
@@ -168,6 +171,25 @@
     }
 
     /**
+     * Available Date getter
+     * @return string
+     */
+    public function getDate(): string
+    {
+
+        return $this->availableDate;
+    }
+    /**
+     * Available Date setter
+     * @param string $availableDate
+     */
+    public function setDate(string $availableDate): void
+    {
+        
+        $this->availableDate = $availableDate;
+    }
+
+    /**
      * Parse the array into an object of type product
      * @param array $json
      */
@@ -180,5 +202,6 @@
         $this->setProductDescription($data['productDescription']);
         $this->setImage($data['image']);
         $this->setImageDescription($data['imageDescription']);
+        $this->setDate($data['availableDate']);
     }
  }
