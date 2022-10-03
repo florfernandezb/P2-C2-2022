@@ -59,11 +59,11 @@ p{
 }
 
 .card-content {
-    width: 280px;
+    /* width: 280px; */
     margin: auto;
     text-align: center;
     margin-top: 0.5em;
-    margin-bottom: 1em;;
+    margin-bottom: 1em;
 }
 
 .card-content p {
@@ -110,6 +110,42 @@ header div h1 a{
 
 #menu li a:hover {
     color: #8d524b;
+}
+
+.dropdownmenu{
+    float: left;
+    overflow: hidden;
+}
+
+.dropdownmenu .dropbtn{
+    border: none;
+    outline: none;
+    margin: 0;
+}
+
+.dropdown-content{
+    display: none;
+    width: 25%;
+    position: absolute;
+    background-color: #f3cec7;
+    z-index: 1;
+    padding: 10px;
+    justify-content: center;
+}
+
+.dropdown-content a{
+    float: none;
+    display: inline-block;
+    text-align: left;
+    padding: 5px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f3cec7;
+}
+
+.dropdownmenu:hover .dropdown-content{
+    display: inline-block; 
 }
 
 .product-card picture img {
@@ -312,7 +348,12 @@ legend {
         z-index: 100;
         display: none;
         width: 160px;
-        height: 115px;
+        justify-content: center;
+        /* height: 115px; */
+    }
+
+    .nav-link {
+        padding: 0 !important;
     }
 
     .close {
@@ -336,6 +377,11 @@ legend {
         display: block;
         margin-left: 0;
         margin-bottom: 0.5em;
+    }
+
+    .dropdown-content {
+        display: block;
+        position: relative;
     }
     
 }   
