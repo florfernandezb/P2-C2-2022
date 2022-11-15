@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../framework/jsonProductsReader.php';
 $productId = (int) $_GET['id'];
-$product = getProductId($productId);
+$product = (new Products())->getProductById($productId);
 
 $productCategory = $product->getCategory();
 $productImage = $product->getImage();

@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . '/class/Product.php';
+require_once __DIR__ . '/class/Products.php';
+require_once __DIR__ . '/class/DatabaseConection.php';
 require_once __DIR__ . '/route/route.php';
 
 $routes = getRoutesSitio();

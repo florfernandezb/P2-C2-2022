@@ -1,7 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../framework/jsonProductsReader.php';
-$productList = getProductListFromJson();
+$productList = (new Products())->getProducts();
 
 if (isset($_GET['category'])) {
     $productsFilteredByCategories = getProductsByCategory($_GET['category']);
@@ -14,7 +13,7 @@ if (isset($_GET['category'])) {
         <h2>Conocé nuestros productos</h2>
         <div class="row ">
             <?php
-                foreach($productList as $product): 
+                foreach($productList as $product):
                 $productCategory = $product->getCategory();
                 $productImage = $product->getImage();
                 ?>
