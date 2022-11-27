@@ -30,5 +30,8 @@ function getRoutesSitio() {
         // 'login' => [
         //     'title' => 'Inicio de sesión'
         // ]
+        'cart' => [
+            'title' => 'Mis compras'
+        ]
     ];
 }
