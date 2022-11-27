@@ -4,36 +4,6 @@
 $secciones_validas = [
     "dashboard" => [
         "titulo" => "Panel de administración"
-    ],
-    "admin_comics" => [
-        "titulo" => "Administrar comics"
-    ],
-    "admin_personajes" => [
-        "titulo" => "Administrar Personajes"
-    ],
-    "admin_series" => [
-        "titulo" => "Administrar series"
-    ],
-    "admin_artistas" => [
-        "titulo" => "Administrar artistas"
-    ],
-    "admin_guionistas" => [
-        "titulo" => "Administrar guionistas"
-    ],
-    "add_comic" => [
-        "titulo" => "Agregar Personajes"
-    ],
-    "add_personaje" => [
-        "titulo" => "Agregar Personajes"
-    ],
-    "edit_personaje" => [
-        "titulo" => "Editar datos de Personaje"
-    ],
-    "delete_personaje" => [
-        "titulo" => "Eliminar datos de Personaje"
-    ],
-    "login" => [
-        "titulo" => "FUCKING LOGIN"
     ]
 ];
 
@@ -47,20 +17,8 @@ if (!array_key_exists($seccion, $secciones_validas)) {
 } else {
     $view = $seccion;
     echo $seccion;
-
-//     if($secciones_validas[$seccion]['restringido']){
-//         (new Autenticacion())->verify();        
-//     }
-//     $titulo = $secciones_validas[$seccion]['titulo'];
 }
 
-// if(!isset($view, $routes[$view])) {
-//     $view = '404';
-// } else {
-//     $view = $seccion;
-//     $title = $routes[$view];
-// }
-//$miTituloSeccionBonito = ucfirst(str_replace("_", " ", $vista));
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -101,7 +59,6 @@ if (!array_key_exists($seccion, $secciones_validas)) {
     <main class="container">
 
         <?PHP
-        // require "views/$seccion.php";
         require file_exists("views/$view.php") ? "views/$view.php" : "views/404.php";
         echo $view;
         ?>

@@ -73,7 +73,6 @@ $total = (new Cart())->precio_total();
     </header>
     <?php
     require __DIR__ . '/views/' . $view . '.php';
-    // require file_exists("views/$view.php") ? "views/$view.php" : "views/404.php";
 
     ?>
     <footer>
