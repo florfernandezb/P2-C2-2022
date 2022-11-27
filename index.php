@@ -63,6 +63,7 @@ $total = (new Cart())->precio_total();
                 </li>
                 <li ><a  href="index.php?s=formContacto">Contacto</a></li>
                 <li ><a  href="index.php?s=datos">Datos de las alumnas</a></li>
+                <li ><a  href="index.php?s=login">Admin</a></li>
             </ul>
             <a href="index.php?s=cart" class="divCarritoIcon">
                 <p id="miniCarritoCantidad"><?= $cart ? $quantity : 0 ?></p>
@@ -72,6 +73,7 @@ $total = (new Cart())->precio_total();
     </header>
     <?php
     require __DIR__ . '/views/' . $view . '.php';
+
     ?>
     <footer>
         <p>Este sitio es un trabajo práctico para la materia Programación II del tercer cuatrimestre de la Escuela Da Vinci. </p>

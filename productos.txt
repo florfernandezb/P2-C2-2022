@@ -27,7 +27,7 @@ ENTIDADES
     nick_name > VARCHAR(256)
     nombre_completo > VARCHAR(256)
     contraseña > VARCHAR(256)
-    roles_id > INT / INDEX, NOT NULL, UNSIGNED
+    role > enum
 
 
     las tablas pivote:
