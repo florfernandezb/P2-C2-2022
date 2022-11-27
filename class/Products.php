@@ -150,22 +150,6 @@ require_once "DatabaseConection.php";
         return $this->available_date;
     }
 
-    /**
-     * Parse the array into an object of type product
-     * @param array $json
-     */
-    // public function parseDataFromArray(array $data) {
-    //     $this->setProductId($data['id']);
-    //     $this->setName($data['name']);
-    //     $this->setPrice($data['price']);
-    //     $this->setCategory($data['category']);
-    //     $this->setMeasurements($data['measurements']);
-    //     $this->setProductDescription($data['productDescription']);
-    //     $this->setImage($data['image']);
-    //     $this->setImageDescription($data['imageDescription']);
-    //     $this->setDate($data['availableDate']);
-    // }
-
     protected function getDatabaseData(string $query): ?Products {
         $result = $this->executeQuery($query);
         return $result != null ? $result : null;
@@ -192,25 +176,3 @@ require_once "DatabaseConection.php";
         return $result;
     }
  }
- 
-    /**
-     * Get product data by id
-     * @param int $productId product identifier
-     */
-
-    // public function getProductById(int $productId): ?Products
-    // {
-    //     $db = (new DatabaseConection())->getConection();
-    //     $query = "SELECT * FROM products WHERE id = $productId";
-
-    //     $PDOStatement = $db->prepare($query);
-    //     $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
-    //     $PDOStatement->execute();
-
-    //     $result = $PDOStatement->fetch();
-
-    //     if (!$result) {
-    //         return null;
-    //     }
-    //     return $result;
-    // }
