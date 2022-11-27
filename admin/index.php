@@ -1,9 +1,12 @@
 <?PHP
-// require_once "../functions/autoload.php";
+require_once "../functions/autoload.php";
 
 $secciones_validas = [
     "dashboard" => [
         "titulo" => "Panel de administración"
+    ],
+    "product_crud" => [
+        "titulo" => "Gestion de productos"
     ]
 ];
 
@@ -13,10 +16,8 @@ $seccion = $_GET['a'] ?? "dashboard";
 if (!array_key_exists($seccion, $secciones_validas)) {
     $view = "404";
     $titulo = "404 - Página no encontrada";
-    echo "adentro if";
 } else {
     $view = $seccion;
-    echo $seccion;
 }
 
 ?>
@@ -31,6 +32,7 @@ if (!array_key_exists($seccion, $secciones_validas)) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="res/favicon.png" type="image/x-icon">
 </head>
@@ -38,7 +40,7 @@ if (!array_key_exists($seccion, $secciones_validas)) {
 <body>
 <header class="row">
         <div class="col-6">
-            <h1 ><a href="../index.php?s=home">Hecho por Vicki</a></h1>
+            <h1 ><a href="../index.php?a=dashboard">Hecho por Vicki</a></h1>
         </div>
         
         <nav id="nav" class="col-6 navbar">
@@ -49,7 +51,7 @@ if (!array_key_exists($seccion, $secciones_validas)) {
             <ul id="menu" class="navbar">
                 <li ><a  href="index.php?a=dashboard" class="nav-link active" aria-current="page">Home</a></li>
                 <li class="dropdownmenu">       
-                <a  href="index.php?s=add_product" class="nav-link active" aria-current="page">ADD PROD</a>
+                <a  href="index.php?a=product_crud" class="nav-link active" aria-current="page">Productos</a>
                 </li>
                 <li ><a  href="index.php?s=formContacto">NADA</a></li>
                 <li ><a  href="actions/auth_logout.php">LOGOUT</a></li>
@@ -60,7 +62,6 @@ if (!array_key_exists($seccion, $secciones_validas)) {
 
         <?PHP
         require file_exists("views/$view.php") ? "views/$view.php" : "views/404.php";
-        echo $view;
         ?>
 
     </main>
