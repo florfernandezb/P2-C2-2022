@@ -59,7 +59,7 @@ $items = $miCarrito->get_carrito();
 
             <div class="d-flex justify-content-end gap-2">
                 <input type="submit" value="Actualizar Cantidades" class="btn btn-warning">
-                <a href="index.php?sec=catalogo_completo" role="button" class=" btn btn-danger">Seguir comprando</a>
+                <a href="index.php?s=productList" role="button" class=" btn btn-danger">Seguir comprando</a>
                 <a href="actions/clear_cart_acc.php" role="button" class="btn btn-danger">Vaciar Carrito</a>
                 <a href="#" role="button" class="btn btn-primary">Finalizar Compra</a>
             </div>
