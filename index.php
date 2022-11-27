@@ -55,11 +55,14 @@ if(!isset($routes[$view])) {
                 </li>
                 <li ><a  href="index.php?s=formContacto">Contacto</a></li>
                 <li ><a  href="index.php?s=datos">Datos de las alumnas</a></li>
+                <li ><a  href="admin/index.php?a=login">Admin</a></li>
             </ul>
         </nav>
     </header>
     <?php
     require __DIR__ . '/views/' . $view . '.php';
+    // require file_exists("views/$view.php") ? "views/$view.php" : "views/404.php";
+
     ?>
     <footer>
         <p>Este sitio es un trabajo práctico para la materia Programación II del tercer cuatrimestre de la Escuela Da Vinci. </p>
