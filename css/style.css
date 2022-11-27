@@ -386,6 +386,32 @@ legend {
     
 }   
 
+.divCarritoIcon {
+    width: 50px;
+    height: 50px;
+    float: right;
+    display: block;
+    background: no-repeat url(../res/carrito.png);
+    cursor: hand;
+}
+
+.divCarritoIcon:hover p:last-child{
+    color: #8d524b;
+    cursor: hand;
+}
+
+#miniCarritoCantidad {
+    margin-right: 0.9em !important;
+    font-size: 0.80em !important;
+    color: #fad5ce !important;
+    text-align: right !important;
+}
+
+#miniCarritoPrecio {
+    color: #16001e;
+    margin: 2em 0em;
+}
+
 
 /* .see-more {
     background-color: #16001e;

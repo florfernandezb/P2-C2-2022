@@ -26,6 +26,9 @@ function getRoutesSitio() {
         ],
         'datos' => [
             'title' => 'Datos de las alumnas'
+        ],
+        'cart' => [
+            'title' => 'Mis compras'
         ]
     ];
 }

@@ -1,10 +1,11 @@
 <?php
 
-require_once __DIR__ . '/../framework/jsonProductsReader.php';
-$productList = getProductListFromJson();
+$products = new Products();
+$productList = $products->getProducts();
 
 if (isset($_GET['category'])) {
-    $productsFilteredByCategories = getProductsByCategory($_GET['category']);
+    $productsFilteredByCategories = $products->getProductsByCategory($_GET['category']);
+
     $productList = $productsFilteredByCategories;
 }
 
@@ -14,16 +15,15 @@ if (isset($_GET['category'])) {
         <h2>Conocé nuestros productos</h2>
         <div class="row ">
             <?php
-                foreach($productList as $product): 
-                $productCategory = $product->getCategory();
+                foreach($productList as $product):
                 $productImage = $product->getImage();
                 ?>
             
             <article class=" col-xxl-4 col-md-6 col-xs-6">
                 <div class="product-card">
                     <picture>
-                        <source srcset="<?= './res/'. $productCategory .'/'. $productImage . '-mobile.png';?>" media="(max-width:480px)">
-                        <img src="<?= './res/'. $productCategory .'/'. $productImage . '.png';?>" alt="<?= $product->getImageDescription();?>">
+                        <source srcset="<?= './res/products/'. $productImage . '-mobile.png';?>" media="(max-width:480px)">
+                        <img src="<?= './res/products/'. $productImage . '.png';?>" alt="<?= $product->getImageDescription();?>">
                     </picture>
                     <div class="card-content">
                         <h3><?= $product->getName();?></h3>
