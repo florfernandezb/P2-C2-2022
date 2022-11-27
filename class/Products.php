@@ -7,9 +7,6 @@
 
     /** @var string */
     protected $name;
-
-    /** @var int */
-    protected $category_id;
     
     /** @var int */
     protected $price;
@@ -82,6 +79,12 @@
         }
         return $result;
     }
+
+    public function getProductsByCategory(int $categoryId): ?Products {
+        $products = [];
+
+        $query = "SELECT products.*, GROUP_CONCAT()";
+    }
     
     /**
      * Product id getter 
@@ -107,15 +110,6 @@
     public function getPrice(): string
     {
         return $this->price;
-    }
-
-    /**
-     * Product category getter
-     * @return int
-     */
-    public function getCategory(): int
-    {
-        return $this->category_id;
     }
 
     /**

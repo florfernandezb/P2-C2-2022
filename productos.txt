@@ -11,7 +11,7 @@ ENTIDADES
     imageDescription > VARCHAR(256)
     availableDate > DATE
     colors > INT / INDEX, NOT NULL, UNSIGNED
-    quantity > INT
+    // quantity > INT
 
     CATEGORIAS
     id > INT PRIMARY_KEY, AUTO_INCREMENT, NOT NULL, UNSIGNED
@@ -27,12 +27,17 @@ ENTIDADES
     nick_name > VARCHAR(256)
     nombre_completo > VARCHAR(256)
     contraseña > VARCHAR(256)
-    roles_id >
+    roles_id > INT / INDEX, NOT NULL, UNSIGNED
 
 
     las tablas pivote:
 
-    personajes_x_comic
+    productos_x_categoria
     id
-    comic_id ---> id (tabla comic)
-    personaje_id --> id tabla (personaje)
+    product_id ---> id (tabla product)
+    categorory_id --> id tabla (category)
+
+    productos_x_color
+    id
+    product_id ---> id (tabla product)
+    color_id --> id tabla (category)

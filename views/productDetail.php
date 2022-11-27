@@ -3,15 +3,15 @@ require_once __DIR__ . '/../framework/jsonProductsReader.php';
 $productId = (int) $_GET['id'];
 $product = (new Products())->getProductById($productId);
 
-$productCategory = $product->getCategory();
+// $productCategory = $product->getCategory();
 $productImage = $product->getImage();
 
 ?>
 <main class="container">
     <section class="product-details row">
         <picture class="img-prod col-6">
-            <source srcset="<?= './res/'. $productCategory .'/'. $productImage . '.png';?>" media="(max-width:480px)">
-            <img src="<?= './res/'. $productCategory .'/'. $productImage . '.png';?>" alt="<?= $product->getImageDescription();?>">
+            <source srcset="<?= './res/products/'. $productImage . '.png';?>" media="(max-width:480px)">
+            <img src="<?= './res/products/'. $productImage . '.png';?>" alt="<?= $product->getImageDescription();?>">
         </picture>
             
         <div class="prod-details col-6">

@@ -14,15 +14,14 @@ if (isset($_GET['category'])) {
         <div class="row ">
             <?php
                 foreach($productList as $product):
-                $productCategory = $product->getCategory();
                 $productImage = $product->getImage();
                 ?>
             
             <article class=" col-xxl-4 col-md-6 col-xs-6">
                 <div class="product-card">
                     <picture>
-                        <source srcset="<?= './res/'. $productCategory .'/'. $productImage . '-mobile.png';?>" media="(max-width:480px)">
-                        <img src="<?= './res/'. $productCategory .'/'. $productImage . '.png';?>" alt="<?= $product->getImageDescription();?>">
+                        <source srcset="<?= './res/products/'. $productImage . '-mobile.png';?>" media="(max-width:480px)">
+                        <img src="<?= './res/products/'. $productImage . '.png';?>" alt="<?= $product->getImageDescription();?>">
                     </picture>
                     <div class="card-content">
                         <h3><?= $product->getName();?></h3>

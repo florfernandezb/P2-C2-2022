@@ -40,7 +40,7 @@ class DatabaseConection
         $db = (new DatabaseConection())->getConection();
         
         $PDOStatement = $db->prepare($query);
-        $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
+        $PDOStatement->setFetchMode(PDO::FETCH_CLASS, Products::class);
         $PDOStatement->execute();
 
         $result = $PDOStatement->fetch();
@@ -49,7 +49,6 @@ class DatabaseConection
             return null;
         }
 
-        print_r($result);
         return $result;
     }
 }
