@@ -94,7 +94,7 @@ if (!array_key_exists($seccion, $secciones_validas)) {
                 <a  href="index.php?s=add_product" class="nav-link active" aria-current="page">ADD PROD</a>
                 </li>
                 <li ><a  href="index.php?s=formContacto">NADA</a></li>
-                <li ><a  href="index.php?a=login">LOGIN</a></li>
+                <li ><a  href="actions/auth_logout.php">LOGOUT</a></li>
             </ul>
         </nav>
     </header>

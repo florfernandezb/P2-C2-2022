@@ -2,5 +2,5 @@
 require_once "../../functions/autoload.php";
 
 
-(new Autenticacion())->log_out();
+(new Authentication())->log_out();
 header('location: ../../index.php?s=login');

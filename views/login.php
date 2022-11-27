@@ -1,7 +1,7 @@
 <main class="container text-center">
     <section class="row justify-content-center">
         <h2>Inicia Sesión</h2>
-        <form action="actions/auth_login.php" method="POST">
+        <form action="./admin/actions/auth_login.php" method="POST">
             <div class="row justify-content-center">
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="mb-3">

@@ -63,7 +63,7 @@ $total = (new Cart())->precio_total();
                 </li>
                 <li ><a  href="index.php?s=formContacto">Contacto</a></li>
                 <li ><a  href="index.php?s=datos">Datos de las alumnas</a></li>
-                <li ><a  href="admin/index.php?a=login">Admin</a></li>
+                <li ><a  href="index.php?s=login">Admin</a></li>
             </ul>
             <a href="index.php?s=cart" class="divCarritoIcon">
                 <p id="miniCarritoCantidad"><?= $cart ? $quantity : 0 ?></p>

@@ -12,12 +12,12 @@ class User
 
     public function users(string $username): ?User
     {
-        $connect = DatabaseConection::getConection();
+        $connect = (new DatabaseConection())->getConection();
         $query = "SELECT * FROM users WHERE username = ?";
 
         $PDOStatement = $connect ->prepare($query);
         $PDOStatement -> setFetchMode(PDO::FETCH_CLASS, self::class);
-        $PDOStatement -> execite([$username]);
+        $PDOStatement -> execute([$username]);
 
         $result = $PDOStatement -> fetch();
 
