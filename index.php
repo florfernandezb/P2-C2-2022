@@ -1,15 +1,25 @@
 <?php
 require_once __DIR__ . '/class/Products.php';
+require_once __DIR__ . '/class/Cart.php';
+require_once __DIR__ . '/class/Categories.php';
 require_once __DIR__ . '/class/DatabaseConection.php';
 require_once __DIR__ . '/route/route.php';
+
+require_once "functions/autoload.php";
 
 $routes = getRoutesSitio();
 
 $view = $_GET['s'] ?? 'home';
 
+$categories = (new Categories())->getCategories();
+
 if(!isset($routes[$view])) {
     $view = '404';
 }
+
+$cart = (new Cart())->get_carrito();
+$quantity = ((new Cart())->cantidad_total());
+$total = (new Cart())->precio_total();
 
 ?>
 
@@ -45,17 +55,19 @@ if(!isset($routes[$view])) {
                 <li class="dropdownmenu">       
                 <a  href="index.php?s=productList" class="nav-link active" aria-current="page">Productos</a>
                     <ul class="dropdown-content">
-                        <li ><a href="index.php?s=productList&category=bowls">Bowls</a></li>
-                        <li><a href="index.php?s=productList&category=fuentes">Fuentes</a></li>
-                        <li><a href="index.php?s=productList&category=macetas">Macetas</a></li>
-                        <li><a href="index.php?s=productList&category=mates">Mates</a></li>
-                        <li><a href="index.php?s=productList&category=platos">Platos</a></li>
-                        <li><a href="index.php?s=productList&category=tazas">Tazas</a></li>
+                    <?php foreach($categories as $category): ?>
+                        <li ><a href="index.php?s=productList&category=<?= $category->getId();?>"><?= ucfirst($category->getName());?></a></li> 
+                    <?php
+                    endforeach; ?>
                     </ul>
                 </li>
                 <li ><a  href="index.php?s=formContacto">Contacto</a></li>
                 <li ><a  href="index.php?s=datos">Datos de las alumnas</a></li>
             </ul>
+            <a href="index.php?s=cart" class="divCarritoIcon">
+                <p id="miniCarritoCantidad"><?= $cart ? $quantity : 0 ?></p>
+                <p id="miniCarritoPrecio"><?= $cart ? $total : 0 ?></p>
+            </a>
         </nav>
     </header>
     <?php

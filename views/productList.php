@@ -1,9 +1,11 @@
 <?php
 
-$productList = (new Products())->getProducts();
+$products = new Products();
+$productList = $products->getProducts();
 
 if (isset($_GET['category'])) {
-    $productsFilteredByCategories = getProductsByCategory($_GET['category']);
+    $productsFilteredByCategories = $products->getProductsByCategory($_GET['category']);
+
     $productList = $productsFilteredByCategories;
 }
 

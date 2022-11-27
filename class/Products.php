@@ -1,4 +1,5 @@
 <?php
+require_once "DatabaseConection.php"; 
 
  class Products {
 
@@ -38,41 +39,17 @@
         $PDOStatement = $db->prepare($query);
         $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
         $PDOStatement->execute();
-
-
         $products = $PDOStatement->fetchAll();
 
         return $products;
     }
-    
-    /**
-     * Get product data by id
-     * @param int $productId product identifier
-     */
-
-    // public function getProductById(int $productId): ?Products
-    // {
-    //     $db = (new DatabaseConection())->getConection();
-    //     $query = "SELECT * FROM products WHERE id = $productId";
-
-    //     $PDOStatement = $db->prepare($query);
-    //     $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
-    //     $PDOStatement->execute();
-
-    //     $result = $PDOStatement->fetch();
-
-    //     if (!$result) {
-    //         return null;
-    //     }
-    //     return $result;
-    // }
+   
 
     public function getProductById(int $productId): ?Products
     {
-        
         $query = "SELECT * FROM products WHERE id = $productId";
 
-        $result = (new DatabaseConection())->executeQuery($query);
+        $result = $this->executeQuery($query);
 
         if (!$result) {
             return null;
@@ -80,10 +57,23 @@
         return $result;
     }
 
-    public function getProductsByCategory(int $categoryId): ?Products {
+    public function getProductsByCategory(int $categoryId) {
         $products = [];
 
-        $query = "SELECT products.*, GROUP_CONCAT()";
+        $query = "SELECT category_id, GROUP_CONCAT(product_id) AS productos FROM product_x_category WHERE product_x_category.category_id= $categoryId GROUP BY product_x_category.category_id;";
+
+        $result = $this->executeQuery($query);
+        $values = explode(",", $result->productos);
+        
+        foreach ($values as $productId) {
+            array_push($products, $this->getProductById((int)$productId));
+        }
+
+        if (!$result) {
+            return null;
+        }
+        
+        return $products;
     }
     
     /**
@@ -175,4 +165,52 @@
     //     $this->setImageDescription($data['imageDescription']);
     //     $this->setDate($data['availableDate']);
     // }
+
+    protected function getDatabaseData(string $query): ?Products {
+        $result = $this->executeQuery($query);
+        return $result != null ? $result : null;
+    }
+
+    /**
+     * execute Products querys
+     * @return Products
+     */
+    protected function executeQuery(string $query): ?Products
+    {
+        $db = (new DatabaseConection())->getConection();
+        
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
+        $PDOStatement->execute();
+
+        $result = $PDOStatement->fetch();
+
+        if (!$result) {
+            return null;
+        }
+
+        return $result;
+    }
  }
+ 
+    /**
+     * Get product data by id
+     * @param int $productId product identifier
+     */
+
+    // public function getProductById(int $productId): ?Products
+    // {
+    //     $db = (new DatabaseConection())->getConection();
+    //     $query = "SELECT * FROM products WHERE id = $productId";
+
+    //     $PDOStatement = $db->prepare($query);
+    //     $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
+    //     $PDOStatement->execute();
+
+    //     $result = $PDOStatement->fetch();
+
+    //     if (!$result) {
+    //         return null;
+    //     }
+    //     return $result;
+    // }

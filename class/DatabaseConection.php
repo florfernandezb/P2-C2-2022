@@ -29,28 +29,6 @@ class DatabaseConection
     {
         return $this->db;
     }
-
-    /**
-     * Get product data by id
-     * @param int $productId product identifier
-     */
-
-    public function executeQuery(string $query): ?Products
-    {
-        $db = (new DatabaseConection())->getConection();
-        
-        $PDOStatement = $db->prepare($query);
-        $PDOStatement->setFetchMode(PDO::FETCH_CLASS, Products::class);
-        $PDOStatement->execute();
-
-        $result = $PDOStatement->fetch();
-
-        if (!$result) {
-            return null;
-        }
-
-        return $result;
-    }
 }
 
 ?>
