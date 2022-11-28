@@ -1,4 +1,6 @@
 <?php 
+$categories = (new Categories)->getCategories();
+
 $PRODUCT_KEYS = [
     ['label' => 'Nombre', 'type' => 'text', 'id' => 'name'],
     ['label' => 'Precio', 'type' => 'number', 'id' => 'price'], 
@@ -21,6 +23,15 @@ $PRODUCT_KEYS = [
             <input type=<?= $formData['type'] ?> class="form-control" id=<?= $formData['id'] ?> name=<?= $formData['id'] ?> required>
         </div>
         <?php } ?>
+        <div class="form-group">
+        <label>Categoría</label>
+        <select class="form-select" name="category" id="category" required>
+            <?php foreach($categories as $category) { ?>
+            <option value=<?= $category->getId() ?>> <?= $category->getName() ?> </option>
+            <?php } ?>
+        </select>
+        </div>
+        
     </div>
     <div class="modal-footer">
         <input type="button" class="btn btnVaciar" data-dismiss="modal" value="Cancelar">
