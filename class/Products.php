@@ -33,7 +33,7 @@ require_once "DatabaseConection.php";
     public function getProducts(): array {
         $products = [];
 
-        $db = (new DatabaseConection())->getConection();
+        $db = DatabaseConection::getConection();
         $query = "SELECT * FROM products;";
 
         $PDOStatement = $db->prepare($query);
@@ -43,7 +43,6 @@ require_once "DatabaseConection.php";
 
         return $products;
     }
-   
 
     public function getProductById(int $productId): ?Products
     {
@@ -74,6 +73,18 @@ require_once "DatabaseConection.php";
         }
         
         return $products;
+    }
+
+    public function createProduct(
+        $name, 
+        $price, 
+        $available_date, 
+        $product_description, 
+        $image, 
+        $image_description, 
+        $product_measurements
+    ) {
+        $db = DatabaseConection::getConection();
     }
     
     /**
@@ -161,7 +172,7 @@ require_once "DatabaseConection.php";
      */
     protected function executeQuery(string $query): ?Products
     {
-        $db = (new DatabaseConection())->getConection();
+        $db = DatabaseConection::getConection();
         
         $PDOStatement = $db->prepare($query);
         $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);

@@ -11,7 +11,7 @@ class Categories {
     public function getCategories() {
         $categories = [];
 
-        $db = (new DatabaseConection())->getConection();
+        $db = DatabaseConection::getConection();
         $query = "SELECT * FROM categories;";
 
         $PDOStatement = $db->prepare($query);

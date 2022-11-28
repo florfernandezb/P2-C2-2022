@@ -12,7 +12,7 @@ class User
 
     public function users(string $username): ?User
     {
-        $connect = (new DatabaseConection())->getConection();
+        $connect = DatabaseConection::getConection();
         $query = "SELECT * FROM users WHERE username = ?";
 
         $PDOStatement = $connect ->prepare($query);

@@ -1,6 +1,14 @@
 <?php
     $TABLE_COLUMNS = [
-        'Id', 'Nombre', 'Precio', 'Disponibilidad', 'Descripcion', 'Imagen', 'Descripcion de la imagen', 'Medidas', 'Acciones'
+        'Id', 
+        'Nombre', 
+        'Precio', 
+        'Disponibilidad', 
+        'Descripcion', 
+        'Imagen', 
+        'Descripcion de la imagen', 
+        'Medidas', 
+        'Acciones'
     ];
     $products = new Products();
     $productList = $products->getProducts();
@@ -15,7 +23,7 @@
 						<h2>Gestion de <b>Productos</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="#addProduct" class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Agregar nuevo producto</span></a>
+						<a href="index.php?a=add_product" class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Agregar nuevo producto</span></a>
 					</div>
 				</div>
 			</div>
@@ -39,8 +47,8 @@
                         <td> <?=  $product->getImageDescription() ?> </td>
                         <td> <?=  $product->getMeasurements() ?> </td>
 						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Edit"></i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
+							<a href="index.php?a=modify_product" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Edit"></i></a>
+							<a href="index.php?a=modify_product" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
 						</td>
 					</tr>
                 <?PHP } ?>

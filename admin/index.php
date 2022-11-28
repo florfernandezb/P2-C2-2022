@@ -7,6 +7,12 @@ $secciones_validas = [
     ],
     "product_crud" => [
         "titulo" => "Gestion de productos"
+    ],
+    "add_product" => [
+        "titulo" => "Agregá un producto"
+    ],
+    "modify_product" => [
+        "titulo" => "Editá un producto"
     ]
 ];
 

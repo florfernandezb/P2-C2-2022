@@ -8,7 +8,7 @@ $items = $miCarrito->get_carrito();
 <div class="container my-4">
 
     <?PHP if (count($items)) { ?>
-        <form action="actions/update_items_acc.php" method="POST">
+        <form action="actions/update_product_acc.php" method="POST">
             <table class="table">
 
                 <thead>
@@ -35,7 +35,7 @@ $items = $miCarrito->get_carrito();
                                 <p class="h5 py-3">$<?= number_format($item['cantidad'] * $item['precio'], 2, ",", ".") ?></p>
                             </td>
                             <td class="text-end align-middle">
-                                <a href="actions/remove_item_acc.php?id=<?= $key ?>" class="btn btn-sm btn-danger">Eliminar</a>
+                                <a href="actions/remove_product_acc.php?id=<?= $key ?>" class="btn btn-sm btn-danger">Eliminar</a>
                             </td>
                         </tr>
                     <?PHP } ?>
@@ -51,11 +51,7 @@ $items = $miCarrito->get_carrito();
                     </tr>
                 </tbody>
 
-
-
-            </table>
-
-
+            </table>>
 
             <div class="d-flex justify-content-end gap-2">
                 <input type="submit" value="Actualizar Cantidades" class="btn btn-warning">
