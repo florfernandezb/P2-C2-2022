@@ -71,6 +71,20 @@ class Colors {
         ]);
     }
 
+    public function deleteColor($id)
+    {
+        $db = DatabaseConection::getConection();
+        $query = "DELETE FROM colors WHERE id = :id";
+
+        $PDOStatement = $db -> prepare($query);
+        $PDOStatement -> execute(
+            [
+
+                'id' => $id
+            ]
+        );
+    }
+
     public function getId(): string
     {
         return $this->id;

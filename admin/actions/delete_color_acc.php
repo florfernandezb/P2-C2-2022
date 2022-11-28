@@ -2,7 +2,7 @@
 require_once "../../functions/autoload.php";
 
 $id = $_GET['id'] ?? FALSE;
-$category = (new Categories())->get_by_id($id);
+$color = (new Colors())->getColorById($id);
 
 $postData = $_POST;
 
@@ -11,16 +11,16 @@ print_r($postData);
 echo "</pre>";
 
 try {
-    $category = new Categories();
+    $color = new Colors();
     $product = new Products();
 
-    $productsList = $product->getProductsByCategory($id);
+    $productsList = $product->getProductsByColor($id);
     
     foreach ($productsList as $prod) {
-        $product->delete_product_x_category($prod->getProductId());
+        $product->delete_product_x_color($prod->getProductId());
     }
 
-    $category->deleteCategory($id);
+    $color->deleteColor($id);
 
     header('Location: ../index.php?a=category_crud');
 } catch (\Exception $e) {

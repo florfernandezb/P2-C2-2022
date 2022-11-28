@@ -75,6 +75,25 @@ require_once "DatabaseConection.php";
         return $products;
     }
 
+    public function getProductsByColor(int $colorId) {
+        $products = [];
+
+        $query = "SELECT color_id, GROUP_CONCAT(product_id) AS productos FROM product_x_color WHERE product_x_color.color_id= $colorId GROUP BY product_x_color.color_id;";
+
+        $result = $this->executeQuery($query);
+        $values = explode(",", $result->productos);
+        
+        foreach ($values as $productId) {
+            array_push($products, $this->getProductById((int)$productId));
+        }
+
+        if (!$result) {
+            return null;
+        }
+        
+        return $products;
+    }
+
     public function createProduct(
         $name, 
         $price, 
@@ -157,6 +176,15 @@ require_once "DatabaseConection.php";
         $db = DatabaseConection::getConection();
 
         $query = "DELETE FROM product_x_category WHERE product_id = $idProduct";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute();
+    }
+
+    public function delete_product_x_color($idProduct) {
+        $db = DatabaseConection::getConection();
+
+        $query = "DELETE FROM product_x_color WHERE product_id = $idProduct";
 
         $PDOStatement = $db->prepare($query);
         $PDOStatement->execute();
