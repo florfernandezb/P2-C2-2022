@@ -10,7 +10,7 @@ $CATEGORY_KEYS = [
 ?>
 <form action="actions/edit_category_acc.php?id=<?= $category->getId() ?>" method="POST">
     <div class="modal-header">						
-        <h4 class="modal-title">Editá tu producto!</h4>
+        <h2 class="modal-title">Editá la categoría:</h2>
     </div>
     <div class="modal-body">	
         <?php foreach($CATEGORY_KEYS as $formData) { 

@@ -4,7 +4,7 @@ $miCarrito = new Cart;
 $items = $miCarrito->get_carrito();
 
 ?>
-<h1 class="text-center fs-2 my-5"> Carrito de Compras</h1>
+<h2 class="text-center fs-2 my-5"> Carrito de Compras</h2>
 <div class="container my-4">
 
     <?PHP if (count($items)) { ?>
@@ -26,7 +26,7 @@ $items = $miCarrito->get_carrito();
                         <tr>
                             <td class="align-middle text-center cartProd">
                                 <img src="<?= './res/products/'. $item['img'] . '.png';?>" alt="Imagen Ilustrativa de <?= $item['product'] ?>" class="img-fluid rounded">
-                                <h2 class="h5"><?= $item['product'] ?></h2>
+                                <h3 class="h5"><?= $item['product'] ?></h3>
                             </td>
                             <td class="align-middle text-center cartCant">
                                     <div>
@@ -47,7 +47,7 @@ $items = $miCarrito->get_carrito();
 
                     <tr>
                         <td colspan="4" class="text-end">
-                            <h2 class="h5 py-3">Total:</h2>
+                            <h3 class="h5 py-3">Total:</h3>
                         </td>
                         <td class="text-end">
                             <p class="h5 py-3">$<?= number_format($miCarrito->precio_total(), 2, ",", ".") ?></p>
@@ -72,7 +72,7 @@ $items = $miCarrito->get_carrito();
 
         </form>
     <?PHP } else { ?>
-        <h2 class="text-center mb-5 text-danger">Su carrito esta vacio</h2>
+        <h3 class="text-center mb-5 text-danger">Su carrito esta vacío</h3>
     <?PHP } ?>
 
 </div>

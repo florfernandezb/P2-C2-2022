@@ -8,7 +8,7 @@ $color = (new Colors())->getColorById($id);
 	<div class="col-12 col-md-6">
 		
 
-			<h3>Id:</h3>
+			<h2>Id:</h2>
 			<p><?= $color->getId() ?></p>
 
 			<h3>Nombre del color:</h3>

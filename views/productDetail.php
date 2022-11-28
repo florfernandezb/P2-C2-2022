@@ -24,7 +24,7 @@ $productImage = $product->getImage();
                 <input type="number" class="form-control" value="1" name="q" id="q">
             </div>
             <div class="col-6">
-                <input type="submit" value="COMPRAR" class="btn btn-danger w-100 fw-bold">
+                <input type="submit" value="COMPRAR" class="btn btnFinalizar w-100 fw-bold">
                 <input type="hidden" value="<?= $productId ?>" name="id" id="id">
             </div>
         </form>

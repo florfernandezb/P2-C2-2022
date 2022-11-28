@@ -8,10 +8,10 @@ $category = (new Categories())->get_by_id($id);
 	<div class="col-12 col-md-6">
 		
 
-			<h3>Id:</h3>
+			<h2>Id:</h2>
 			<p><?= $category->getId() ?></p>
 
-			<h3>Nombre de la categoría:</h3>
+			<h2>Nombre de la categoría:</h2>
 			<p><?= $category->getName() ?></p>
 			
 
