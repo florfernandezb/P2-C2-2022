@@ -41,6 +41,9 @@ function getRoutesSitio() {
         ],
         "delete_category" => [
             "title" => "Elimina una categoría"
+        ],
+        "delete_color" => [
+            "title" => "Elimina un color"
         ]
     ];
 }

@@ -20,6 +20,22 @@ class Colors {
         return $colors;
     }
 
+    public function get_by_id(int $id): ?Colors {
+        $db = DatabaseConection::getConection();
+        $query = "SELECT * FROM colors WHERE id = $id";
+
+        $PDOStatement = $db -> prepare($query);
+        $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
+        $PDOStatement -> execute();
+
+        $result = $PDOStatement->fetch();
+
+        if (!$result) {
+            return null;
+        }
+        return $result;
+    }
+
     public function createColor(
         $color
     ) {
@@ -39,6 +55,21 @@ class Colors {
 
         return $result['id'];
     }
+
+    public function deleteColor($id)
+    {
+        $db = DatabaseConection::getConection();
+        $query = "DELETE FROM colors WHERE id = :id";
+
+        $PDOStatement = $db -> prepare($query);
+        $PDOStatement -> execute(
+            [
+
+                'id' => $id
+            ]
+        );
+    }
+    
 
     public function getId(): string
     {
