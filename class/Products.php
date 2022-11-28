@@ -85,6 +85,30 @@ require_once "DatabaseConection.php";
         $product_measurements
     ) {
         $db = DatabaseConection::getConection();
+        $query = "INSERT INTO `products` 
+        (`name`, `price`, `available_date`, `product_description`, `image`, `image_description`, `product_measurements`)
+        VALUES ('$name', '$price', '$available_date', '$product_description', '$image', '$image_description', '$product_measurements');
+        SELECT MAX(id) AS id FROM products";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute();
+        
+        $getProductId = "SELECT MAX(id) AS id FROM products";
+        
+        $PDOStatement = $db->prepare($getProductId);
+        $PDOStatement->execute();
+        $result = $PDOStatement->fetch();
+
+        return $result['id'];
+    }
+
+    public function add_product_x_category($idProduct, $categoryId) {
+        $db = DatabaseConection::getConection();
+
+        $query = "INSERT INTO product_x_category VALUES (NULL, $idProduct, $categoryId)";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute();
     }
     
     /**

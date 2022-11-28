@@ -10,12 +10,11 @@ class Authentication
         
         if ($dataUser) {
             if ($password === $dataUser->getPassword()) {
-                print_r("entre");
                 $dataLogin['username'] = $dataUser->getUsername();
                 $dataLogin['id'] = $dataUser -> getId();
                 $dataLogin['rol'] = $dataUser -> getRole();
                 $_SESSION['loggedIn'] = $dataLogin;
-                print_r($dataUser -> getRole());
+                
                 return $dataLogin['rol'];
             } else {
                 echo "La contraseña ingresada es incorrecta.";
