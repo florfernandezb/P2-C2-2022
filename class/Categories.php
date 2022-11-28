@@ -41,15 +41,15 @@ class Categories {
 
     public function editCategory(
         $id,
-        $name,
+        $catName,
     ) {
         $db = DatabaseConection::getConection();
-        $query = "UPDATE products SET name = :name,  WHERE id = :id";
+        $query = "UPDATE categories SET name = :catName  WHERE id = :id";
 
         $PDOStatement = $db->prepare($query);
         $PDOStatement->execute([
-            'id' => $id,
-            'name' => $name
+            ':id'=>$id,
+            ':catName'=>$catName
         ]);
     }
 

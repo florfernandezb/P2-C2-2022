@@ -18,12 +18,10 @@ class Authentication
                 return $dataLogin['rol'];
             } else {
                 echo "La contraseña ingresada es incorrecta.";
-                // (new Alerta())->add_alerta('danger', "La contraseña ingresada es incorrecta.");
                 return NULL;
             }
         } else{
             echo "El usuario ingresado no se encontró en nuestra base de datos.";
-            // (new Alerta())->add_alerta('warning', "El usuario ingresado no se encontró en nuestra base de datos.");
             return NULL;
         }
     }

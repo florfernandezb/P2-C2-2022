@@ -35,7 +35,7 @@
 						<td><p>  <?=  $color->getId() ?> </p></td>
 						<td> <?=  $color->getColor() ?> </td>
 						<td>
-							<a href="index.php?a=modify_color" class="edit" data-toggle="modal"><i class="bi bi-pen-fill biIcons"></i></a>
+							<a href="index.php?a=modify_color&id=<?= $color->getId() ?>" class="edit" data-toggle="modal"><i class="bi bi-pen-fill biIcons"></i></a>
 							<a href="index.php?a=modify_color" class="delete" data-toggle="modal"><i class="bi bi-trash-fill" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
 						</td>
 					</tr>

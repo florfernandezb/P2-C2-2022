@@ -8,13 +8,12 @@ $CATEGORY_KEYS = [
     ['label' => 'Nombre', 'type' => 'text', 'id' => 'name', 'value' => $category->getName()]
 ];
 ?>
-<form action="actions/edit_product_acc.php?id=<?= $product->getProductId() ?>" method="POST">
+<form action="actions/edit_category_acc.php?id=<?= $category->getId() ?>" method="POST">
     <div class="modal-header">						
         <h4 class="modal-title">Editá tu producto!</h4>
     </div>
     <div class="modal-body">	
         <?php foreach($CATEGORY_KEYS as $formData) { 
-            print_r($CATEGORY_KEYS);
             ?>				
         <div class="form-group">
             <label><?= $formData['label'] ?></label>
