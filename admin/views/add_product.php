@@ -7,7 +7,7 @@ $PRODUCT_KEYS = [
     ['label' => 'Disponibilidad', 'type' => 'date', 'id' => 'available_date'], 
     ['label' => 'Descripción', 'type' => 'text', 'id' => 'product_description'], 
     ['label' => 'Imagen', 'type' => 'file', 'id' => 'image'], 
-    ['label' => 'Descripción de la imagen', 'type' => 'text', 'id' => ''],
+    ['label' => 'Descripción de la imagen', 'type' => 'text', 'id' => 'image_description'],
     ['label' => 'Medidas del producto', 'type' => 'text', 'id' => 'product_measurements'], 
 ];
 ?>
@@ -34,7 +34,7 @@ $PRODUCT_KEYS = [
         
     </div>
     <div class="modal-footer">
-        <input type="button" class="btn btnVaciar" data-dismiss="modal" value="Cancelar">
+        <a href="index.php?a=product_crud" type="button" class="btn btnVaciar" data-dismiss="modal" value="Cancelar">Cancelar</a>
         <input type="submit" class="btn btnFinalizar" value="Guardar">
     </div>
 </form>

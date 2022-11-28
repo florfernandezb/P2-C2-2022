@@ -36,7 +36,7 @@
 						<td> <?=  $category->getName() ?> </td>
 						<td>
 							<a href="index.php?a=modify_category" class="edit" data-toggle="modal"><i class="bi bi-pen-fill biIcons"></i></a>
-							<a href="index.php?a=modify_category" class="delete" data-toggle="modal"><i class="bi bi-trash-fill" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
+							<a href="index.php?a=delete_category&id=<?= $category->getId() ?>" class="delete" data-toggle="modal"><i class="bi bi-trash-fill" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
 						</td>
 					</tr>
                 <?PHP } ?>

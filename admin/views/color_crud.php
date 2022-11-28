@@ -17,7 +17,7 @@
 						<h2>Gestión de <b>Colores:</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="index.php?a=add_color" class="btn btnFinalizar" data-toggle="modal"><i class="bi bi-plus-circle-fill biIconsLight"></i> <span>Agregar un nuevo color:</span></a>
+						<a href="index.php?a=add_color" class="btn btnFinalizar" data-toggle="modal"><i class="bi bi-plus-circle-fill biIconsLight"></i> <span>Agregar un nuevo color</span></a>
 					</div>
 				</div>
 			</div>

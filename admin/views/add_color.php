@@ -1,6 +1,6 @@
 <?php 
 $COLOR_KEYS = [
-    ['label' => 'Color', 'type' => 'text', 'id' => 'name']
+    ['label' => 'Color', 'type' => 'text', 'id' => 'color']
 ];
 ?>
 <form action="actions/add_color_acc.php" method="POST">

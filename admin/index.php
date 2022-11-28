@@ -12,7 +12,7 @@ $secciones_validas = [
         "titulo" => "Gestión de categorías"
     ],
     "color_crud" => [
-        "title" => "Gestión de colores"
+        "titulo" => "Gestión de colores"
     ],
     "add_product" => [
         "titulo" => "Agregá un producto"
@@ -27,10 +27,13 @@ $secciones_validas = [
         "titulo" => "Editá una categoría"
     ],
     "add_color" => [
-        "title" => "Agregá un color"
+        "titulo" => "Agregá un color"
     ],
     "modify_color" => [
-        "title" => "Editá un color"
+        "titulo" => "Editá un color"
+    ],
+    "delete_category" => [
+        "titulo" => "Elimina una categoría"
     ]
 ];
 
@@ -91,8 +94,10 @@ if (!array_key_exists($seccion, $secciones_validas)) {
         ?>
 
     </main>
-    <footer class="bg-info text-light text-center">
-        Jorge Perez 2022
+    <footer>
+        <p>Este sitio es un trabajo práctico para la materia Programación II del tercer cuatrimestre de la Escuela Da Vinci. </p>
+        <p>Florencia Fernández Bugna | Manuela Jaureguialzo</p>
+        <p>&copy; Da Vinci - 2022</p>
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

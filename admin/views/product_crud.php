@@ -44,8 +44,8 @@
 						<td> <?=  $product->getDate() ?> </td>
                         <td> <?=  $product->getProductDescription() ?> </td>
                         <td> <picture>
-                        <source srcset="<?= '../../res/products/'. $productImage . '-mobile.png';?>" media="(max-width:480px)">
-                        <img src="<?= '../../res/products/'. $productImage . '.png';?>" alt="<?= $product->getImage();?>">
+                        <!-- <source srcset="<?= '../../res/products/'. $productImage . '-mobile.png';?>" media="(max-width:480px)"> -->
+                        <img src="../../res/products/<?= $product -> getImage() . '.png';?>" alt="<?= $product->getImageDescription();?>">
                     </picture>
                         <td> <?=  $product->getImageDescription() ?> </td>
                         <td> <?=  $product->getMeasurements() ?> </td>

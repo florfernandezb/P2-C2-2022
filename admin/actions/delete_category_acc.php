@@ -1,6 +1,9 @@
 <?PHP
 require_once "../../functions/autoload.php";
 
+$id = $_GET['id'] ?? FALSE;
+$category = (new Categories())->get_by_id($id);
+
 $postData = $_POST;
 
 echo "<pre>";
@@ -8,12 +11,10 @@ print_r($postData);
 echo "</pre>";
 
 try {
-
     $category = new Categories();
 
-    $idCategory = $category->createCategory(
-        $postData['name']
-    );
+    $category->deleteCategory($id);
+   
 
 
     header('Location: ../index.php?a=category_crud');
@@ -21,5 +22,5 @@ try {
     echo "<pre>";
     print_r($e->getMessage());
     echo "<pre>";
-    die("No se pudo crear la categoría");
+    die("No se pudo eliminar la categoría");
 }
