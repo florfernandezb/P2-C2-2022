@@ -483,8 +483,19 @@ legend {
 }
 
 .biIcons {
+    color: #16001e;
     margin: 0.25em;
 }
+
+.biIcons:hover{
+    color: #8d524b;
+}
+
+.biIconsLight {
+    color: #f3cec7;
+    margin: 0.25em;
+}
+
 /* .see-more {
     background-color: #16001e;
     color: #f3cec7;

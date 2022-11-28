@@ -4,9 +4,9 @@
         'Nombre', 
         'Precio', 
         'Disponibilidad', 
-        'Descripcion', 
+        'Descripción', 
         'Imagen', 
-        'Descripcion de la imagen', 
+        'Descripción de la imagen', 
         'Medidas', 
         'Acciones'
     ];
@@ -20,10 +20,10 @@
 			<div class="table-title">
 				<div class="row">
 					<div class="col-sm-6">
-						<h2>Gestion de <b>Productos</b></h2>
+						<h2>Gestión de <b>Productos</b></h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="index.php?a=add_product" class="btn btn-success" data-toggle="modal"><i class="material-icons"></i> <span>Agregar nuevo producto</span></a>
+						<a href="index.php?a=add_product" class="btn btnFinalizar" data-toggle="modal"><i class="bi bi-plus-circle-fill biIconsLight"></i> <span>Agregar nuevo producto</span></a>
 					</div>
 				</div>
 			</div>
@@ -43,12 +43,15 @@
 						<td> <?=  $product->getPrice() ?> </td>
 						<td> <?=  $product->getDate() ?> </td>
                         <td> <?=  $product->getProductDescription() ?> </td>
-                        <td> <?=  $product->getImage() ?> </td>
+                        <td> <picture>
+                        <source srcset="<?= '../../res/products/'. $productImage . '-mobile.png';?>" media="(max-width:480px)">
+                        <img src="<?= '../../res/products/'. $productImage . '.png';?>" alt="<?= $product->getImage();?>">
+                    </picture>
                         <td> <?=  $product->getImageDescription() ?> </td>
                         <td> <?=  $product->getMeasurements() ?> </td>
 						<td>
-							<a href="index.php?a=modify_product" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Edit"></i></a>
-							<a href="index.php?a=modify_product" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
+							<a href="index.php?a=modify_product" class="edit" data-toggle="modal"><i class="bi bi-pen-fill biIcons"></i></a>
+							<a href="index.php?a=modify_product" class="delete" data-toggle="modal"><i class="bi bi-trash-fill" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
 						</td>
 					</tr>
                 <?PHP } ?>

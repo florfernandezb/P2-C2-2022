@@ -13,6 +13,8 @@ $view = $_GET['s'] ?? 'home';
 
 $categories = (new Categories())->getCategories();
 
+$colors = (new Colors()) ->getColors();
+
 if(!isset($routes[$view])) {
     $view = '404';
 }
