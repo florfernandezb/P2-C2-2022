@@ -39,6 +39,20 @@ class Categories {
         return $category;
     }
 
+    public function editCategory(
+        $id,
+        $name,
+    ) {
+        $db = DatabaseConection::getConection();
+        $query = "UPDATE products SET name = :name,  WHERE id = :id";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute([
+            'id' => $id,
+            'name' => $name
+        ]);
+    }
+
     public function get_categories_x_product($productId) {
         $categories = [];
         $categoriesSelected = [];

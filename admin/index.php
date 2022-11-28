@@ -1,53 +1,13 @@
 <?PHP
+require_once __DIR__ . '/routes/routes.php';
 require_once "../functions/autoload.php";
 
-$secciones_validas = [
-    "dashboard" => [
-        "titulo" => "Panel de administración"
-    ],
-    "product_crud" => [
-        "titulo" => "Gestión de productos"
-    ],
-    "category_crud" => [
-        "titulo" => "Gestión de categorías"
-    ],
-    "color_crud" => [
-        "titulo" => "Gestión de colores"
-    ],
-    "add_product" => [
-        "titulo" => "Agrega un producto"
-    ],
-    "modify_product" => [
-        "titulo" => "Edita un producto"
-    ],
-    "delete_product" => [
-        "titulo" => "Elimina el producto"
-    ],
-    "add_category" => [
-        "titulo" => "Agregá una categoría"
-    ],
-    "modify_category" => [
-        "titulo" => "Editá una categoría"
-    ],
-    "add_color" => [
-        "titulo" => "Agregá un color"
-    ],
-    "modify_color" => [
-        "titulo" => "Editá un color"
-    ],
-    "delete_category" => [
-        "titulo" => "Elimina una categoría"
-    ]
-];
+$routes = getRoutesSitio();
 
-$seccion = $_GET['a'] ?? "dashboard";
+$view = $_GET['a'] ?? "dashboard";
 
-
-if (!array_key_exists($seccion, $secciones_validas)) {
-    $view = "404";
-    $titulo = "404 - Página no encontrada";
-} else {
-    $view = $seccion;
+if(!isset($routes[$view])) {
+    $view = '404';
 }
 
 ?>

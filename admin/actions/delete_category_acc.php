@@ -12,10 +12,19 @@ echo "</pre>";
 
 try {
     $category = new Categories();
+    $product = new Products();
+
+    $productsList = $product->getProductsByCategory($id);
+    
+    foreach ($productsList as $prod) {
+        $product->delete_product_x_category($prod->getProductId());
+    }
+
+    echo "<pre>";
+    print_r($productsList);
+    echo "</pre>";
 
     $category->deleteCategory($id);
-   
-
 
     header('Location: ../index.php?a=category_crud');
 } catch (\Exception $e) {
