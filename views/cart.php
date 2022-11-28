@@ -9,7 +9,7 @@ $items = $miCarrito->get_carrito();
 
     <?PHP if (count($items)) { ?>
         <form action="actions/update_product_acc.php" method="POST">
-            <table class="table">
+        <div class="row justify-content-center">
 
        
         <div class="col-auto table">
@@ -55,9 +55,14 @@ $items = $miCarrito->get_carrito();
                         <td></td>
                     </tr>
                 </tbody>
+
+
+
             </table>
             </div>
             </div>
+
+
             <div class="d-flex justify-content-end gap-2">
                 
                 <a href="index.php?s=productList" role="button" class=" btn btnSeguirComprando"><i class="bi bi-arrow-left biIcons"></i>Seguir comprando</a>
