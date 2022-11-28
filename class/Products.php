@@ -110,6 +110,20 @@ require_once "DatabaseConection.php";
         $PDOStatement = $db->prepare($query);
         $PDOStatement->execute();
     }
+
+    public function deleteProduct($productId)
+    {
+        $db = DatabaseConection::getConection();
+        $query = "DELETE FROM products WHERE id = :id";
+
+        $PDOStatement = $db -> prepare($query);
+        $PDOStatement -> execute(
+            [
+
+                'id' => $productId
+            ]
+        );
+    }
     
     /**
      * Product id getter 

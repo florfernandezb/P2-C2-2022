@@ -34,6 +34,9 @@ $secciones_validas = [
     ],
     "delete_category" => [
         "titulo" => "Elimina una categoría"
+    ],
+    "delete_product" => [
+        "titulo" => "Elimina un producto"
     ]
 ];
 
