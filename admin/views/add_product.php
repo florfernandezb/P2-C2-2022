@@ -5,15 +5,15 @@ $PRODUCT_KEYS = [
     ['label' => 'Nombre', 'type' => 'text', 'id' => 'name'],
     ['label' => 'Precio', 'type' => 'number', 'id' => 'price'], 
     ['label' => 'Disponibilidad', 'type' => 'date', 'id' => 'available_date'], 
-    ['label' => 'Descripcion', 'type' => 'text', 'id' => 'product_description'], 
-    ['label' => 'Imagen', 'type' => 'text', 'id' => 'image'], 
-    ['label' => 'Descripcion de la imagen', 'type' => 'text', 'id' => 'image_description'],
+    ['label' => 'Descripción', 'type' => 'text', 'id' => 'product_description'], 
+    ['label' => 'Imagen', 'type' => 'file', 'id' => 'image'], 
+    ['label' => 'Descripción de la imagen', 'type' => 'text', 'id' => 'image_description'],
     ['label' => 'Medidas del producto', 'type' => 'text', 'id' => 'product_measurements'], 
 ];
 ?>
 <form action="actions/add_product_acc.php" method="POST">
     <div class="modal-header">						
-        <h4 class="modal-title">Agregá un producto!</h4>
+        <h4 class="modal-title">Agregá un producto:</h4>
     </div>
     <div class="modal-body">	
         <?php foreach($PRODUCT_KEYS as $formData) { 
@@ -34,7 +34,7 @@ $PRODUCT_KEYS = [
         
     </div>
     <div class="modal-footer">
-        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-        <input type="submit" class="btn btn-info" value="Save">
+        <a href="index.php?a=product_crud" type="button" class="btn btnVaciar" data-dismiss="modal" value="Cancelar">Cancelar</a>
+        <input type="submit" class="btn btnFinalizar" value="Guardar">
     </div>
 </form>

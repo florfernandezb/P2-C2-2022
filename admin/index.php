@@ -6,7 +6,13 @@ $secciones_validas = [
         "titulo" => "Panel de administración"
     ],
     "product_crud" => [
-        "titulo" => "Gestion de productos"
+        "titulo" => "Gestión de productos"
+    ],
+    "category_crud" => [
+        "titulo" => "Gestión de categorías"
+    ],
+    "color_crud" => [
+        "titulo" => "Gestión de colores"
     ],
     "add_product" => [
         "titulo" => "Agrega un producto"
@@ -16,6 +22,21 @@ $secciones_validas = [
     ],
     "delete_product" => [
         "titulo" => "Elimina el producto"
+    ],
+    "add_category" => [
+        "titulo" => "Agregá una categoría"
+    ],
+    "modify_category" => [
+        "titulo" => "Editá una categoría"
+    ],
+    "add_color" => [
+        "titulo" => "Agregá un color"
+    ],
+    "modify_color" => [
+        "titulo" => "Editá un color"
+    ],
+    "delete_category" => [
+        "titulo" => "Elimina una categoría"
     ]
 ];
 
@@ -42,6 +63,7 @@ if (!array_key_exists($seccion, $secciones_validas)) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="res/favicon.png" type="image/x-icon">
 </head>
@@ -62,7 +84,8 @@ if (!array_key_exists($seccion, $secciones_validas)) {
                 <li class="dropdownmenu">       
                 <a  href="index.php?a=product_crud" class="nav-link active" aria-current="page">Productos</a>
                 </li>
-                <li ><a  href="index.php?s=formContacto">NADA</a></li>
+                <li ><a  href="index.php?a=category_crud">Categorías</a></li>
+                <li ><a  href="index.php?a=color_crud">Colores</a></li>
                 <li ><a  href="actions/auth_logout.php">LOGOUT</a></li>
             </ul>
         </nav>
@@ -74,8 +97,10 @@ if (!array_key_exists($seccion, $secciones_validas)) {
         ?>
 
     </main>
-    <footer class="bg-info text-light text-center">
-        Jorge Perez 2022
+    <footer>
+        <p>Este sitio es un trabajo práctico para la materia Programación II del tercer cuatrimestre de la Escuela Da Vinci. </p>
+        <p>Florencia Fernández Bugna | Manuela Jaureguialzo</p>
+        <p>&copy; Da Vinci - 2022</p>
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
