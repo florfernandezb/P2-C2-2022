@@ -412,7 +412,79 @@ legend {
     margin: 2em 0em;
 }
 
+.table {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
 
+.cartContent {
+    margin: auto;
+    width: 100%;
+}
+
+.cartProd {
+    width: 33%;
+    text-align: left;
+}
+
+.cartCant {
+    width: 33%;
+    text-align: center;
+}
+
+.delete {
+    color: #16001e;
+}
+
+.delete:hover{
+    color: #8d524b;
+}
+
+.btnActCant {
+    background-color: #16001e;
+    color: #fad5ce;
+    margin-top: 1em;
+}
+
+.btnActCant:hover {
+    background-color: #8d524b;
+    color: #fad5ce;
+}
+
+.btnSeguirComprando {
+    background-color: #16001e;
+    color: #fad5ce;
+}
+
+.btnSeguirComprando:hover {
+    background-color: #8d524b;
+    color: #fad5ce;
+}
+
+.btnVaciar {
+    background-color: #8d524b;
+    color: #fad5ce;
+}
+
+.btnVaciar:hover {
+    background-color: #16001e;
+    color: #fad5ce;
+}
+
+.btnFinalizar {
+    background-color: #16001e;
+    color: #fad5ce;
+}
+
+.btnFinalizar:hover {
+    background-color: #8d524b;
+    color: #fad5ce;
+}
+
+.biIcons {
+    margin: 0.25em;
+}
 /* .see-more {
     background-color: #16001e;
     color: #f3cec7;
