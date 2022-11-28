@@ -17,7 +17,7 @@ $COLOR_KEYS = [
         <?php } ?>
     </div>
     <div class="modal-footer"> 
-        <input type="button" class="btn btnVaciar" data-dismiss="modal" value="Cancelar">
+        <a href="index.php?a=color_crud" type="button" class="btn btnVaciar" data-dismiss="modal" value="Cancelar">Cancelar</a>
         <input type="submit" class="btn btnFinalizar" value="Guardar">
     </div>
 </form>

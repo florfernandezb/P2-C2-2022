@@ -27,5 +27,5 @@ try {
     echo "<pre>";
     print_r($e->getMessage());
     echo "<pre>";
-    die("No se pudo eliminar la categoría");
+    die("No se pudo eliminar el color");
 }

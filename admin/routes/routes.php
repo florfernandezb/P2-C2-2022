@@ -43,7 +43,7 @@ function getRoutesSitio() {
             "title" => "Elimina una categoría"
         ],
         "delete_color" => [
-            "title" => "Elimina una categoría"
+            "title" => "Elimina un color"
         ]
     ];
 }
