@@ -144,6 +144,17 @@ require_once "DatabaseConection.php";
         $PDOStatement = $db->prepare($query);
         $PDOStatement->execute();
     }
+
+    public function edit_product_x_category($idProduct, $categoryId) {
+        $db = DatabaseConection::getConection();
+
+        $query = "UPDATE product_x_category 
+        SET category_id = $categoryId 
+        WHERE product_id = $idProduct";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute();
+    }
     
     /**
      * Product id getter 

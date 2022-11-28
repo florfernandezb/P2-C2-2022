@@ -3,7 +3,6 @@ require_once "../../functions/autoload.php";
 
 $postData = $_POST;
 
-
 try {
 
     $product = new Products();

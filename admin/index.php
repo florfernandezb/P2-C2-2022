@@ -9,10 +9,13 @@ $secciones_validas = [
         "titulo" => "Gestion de productos"
     ],
     "add_product" => [
-        "titulo" => "Agregá un producto"
+        "titulo" => "Agrega un producto"
     ],
     "modify_product" => [
-        "titulo" => "Editá un producto"
+        "titulo" => "Edita un producto"
+    ],
+    "delete_product" => [
+        "titulo" => "Elimina el producto"
     ]
 ];
 
