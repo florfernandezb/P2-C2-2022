@@ -8,7 +8,7 @@ $items = $miCarrito->get_carrito();
 <div class="container my-4">
 
     <?PHP if (count($items)) { ?>
-        <form action="actions/update_items_acc.php" method="POST">
+        <form action="actions/update_product_acc.php" method="POST">
         <div class="row justify-content-center">
 
        
@@ -40,7 +40,7 @@ $items = $miCarrito->get_carrito();
                                 </td>
                             </div>
                             <td class="text-end align-middle text-center divCartDel">
-                            <a href="actions/remove_product_acc.php?id=<?= $key ?>" class="delete" data-toggle="modal"><i class="bi bi-trash-fill" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
+                            <a href="actions/remove_product_acc.php?id=<?= $key ?>" class="delete" data-toggle="modal"><i class="bi bi-trash-fill biIcons" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
                             </td>
                         </tr>
                     <?PHP } ?>
@@ -65,9 +65,9 @@ $items = $miCarrito->get_carrito();
 
             <div class="d-flex justify-content-end gap-2">
                 
-                <a href="index.php?s=productList" role="button" class=" btn btnSeguirComprando"><i class="bi bi-arrow-left biIcons"></i>Seguir comprando</a>
+                <a href="index.php?s=productList" role="button" class=" btn btnSeguirComprando"><i class="bi bi-arrow-left biIconsLight"></i>Seguir comprando</a>
                 <a href="actions/clear_cart_acc.php" role="button" class="btn btnVaciar"><i class="bi bi-trash-fill biIcons" data-toggle="tooltip" title="" data-original-title="Delete"></i>Vaciar Carrito</a>
-                <a href="#" role="button" class="btn btnFinalizar">Finalizar Compra<i class="bi bi-arrow-right biIcons"></i></a>
+                <a href="#" role="button" class="btn btnFinalizar">Finalizar Compra<i class="bi bi-arrow-right biIconsLight"></i></a>
             </div>
 
         </form>

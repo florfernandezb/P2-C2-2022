@@ -33,7 +33,7 @@ require_once "DatabaseConection.php";
     public function getProducts(): array {
         $products = [];
 
-        $db = (new DatabaseConection())->getConection();
+        $db = DatabaseConection::getConection();
         $query = "SELECT * FROM products;";
 
         $PDOStatement = $db->prepare($query);
@@ -43,7 +43,6 @@ require_once "DatabaseConection.php";
 
         return $products;
     }
-   
 
     public function getProductById(int $productId): ?Products
     {
@@ -74,6 +73,132 @@ require_once "DatabaseConection.php";
         }
         
         return $products;
+    }
+
+    public function getProductsByColor(int $colorId) {
+        $products = [];
+
+        $query = "SELECT color_id, GROUP_CONCAT(product_id) AS productos FROM product_x_color WHERE product_x_color.color_id= $colorId GROUP BY product_x_color.color_id;";
+
+        $result = $this->executeQuery($query);
+        $values = explode(",", $result->productos);
+        
+        foreach ($values as $productId) {
+            array_push($products, $this->getProductById((int)$productId));
+        }
+
+        if (!$result) {
+            return null;
+        }
+        
+        return $products;
+    }
+
+    public function createProduct(
+        $name, 
+        $price, 
+        $available_date, 
+        $product_description, 
+        $image, 
+        $image_description, 
+        $product_measurements
+    ) {
+        $db = DatabaseConection::getConection();
+        $query = "INSERT INTO `products` 
+        (`name`, `price`, `available_date`, `product_description`, `image`, `image_description`, `product_measurements`)
+        VALUES ('$name', '$price', '$available_date', '$product_description', '$image', '$image_description', '$product_measurements');
+        SELECT MAX(id) AS id FROM products";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute();
+        
+        $getProductId = "SELECT MAX(id) AS id FROM products";
+        
+        $PDOStatement = $db->prepare($getProductId);
+        $PDOStatement->execute();
+        $result = $PDOStatement->fetch();
+
+        return $result['id'];
+    }
+
+    public function editProduct(
+        $id,
+        $name, 
+        $price, 
+        $available_date, 
+        $product_description, 
+        $image, 
+        $image_description, 
+        $product_measurements
+    ) {
+        $db = DatabaseConection::getConection();
+        $query = "UPDATE products SET name = :name,
+        price = :price,
+        available_date = :available_date,
+        product_description = :product_description,
+        image = :image,
+        image_description = :image_description,
+        product_measurements = :product_measurements   
+        WHERE id = :id";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute([
+            'id' => $id,
+            'name' => $name,
+            'price' => $price,
+            'available_date' => $available_date,
+            'product_description' => $product_description,
+            'image' => $image,
+            'image_description' => $image_description,
+            'product_measurements' => $product_measurements, 
+        ]);
+    }
+
+    public function deleteProduct($id)
+    {
+        $db = DatabaseConection::getConection();
+        $query = "DELETE FROM products WHERE id = $id";
+
+        $PDOStatement = $db -> prepare($query);
+        $PDOStatement -> execute();
+    }
+
+    public function add_product_x_category($idProduct, $categoryId) {
+        $db = DatabaseConection::getConection();
+
+        $query = "INSERT INTO product_x_category VALUES (NULL, $idProduct, $categoryId)";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute();
+    }
+
+    public function delete_product_x_category($idProduct) {
+        $db = DatabaseConection::getConection();
+
+        $query = "DELETE FROM product_x_category WHERE product_id = $idProduct";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute();
+    }
+
+    public function delete_product_x_color($idProduct) {
+        $db = DatabaseConection::getConection();
+
+        $query = "DELETE FROM product_x_color WHERE product_id = $idProduct";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute();
+    }
+
+    public function edit_product_x_category($idProduct, $categoryId) {
+        $db = DatabaseConection::getConection();
+
+        $query = "UPDATE product_x_category 
+        SET category_id = $categoryId 
+        WHERE product_id = $idProduct";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute();
     }
     
     /**
@@ -161,7 +286,7 @@ require_once "DatabaseConection.php";
      */
     protected function executeQuery(string $query): ?Products
     {
-        $db = (new DatabaseConection())->getConection();
+        $db = DatabaseConection::getConection();
         
         $PDOStatement = $db->prepare($query);
         $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);

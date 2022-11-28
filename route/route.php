@@ -32,6 +32,6 @@ function getRoutesSitio() {
         ],
         'cart' => [
             'title' => 'Mis compras'
-        ]
+        ],
     ];
 }

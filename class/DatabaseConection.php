@@ -10,12 +10,12 @@ class DatabaseConection
 
     protected const DB_DSN = 'mysql:host=' . self::DB_SERVER . ';dbname=' . self::DB_NAME . ';charset=utf8mb4';
     
-    protected PDO $db;
+    protected static ?PDO $db = null;
 
-    public function __construct()
+    public static function connect()
     {
         try {
-            $this->db = new PDO(self::DB_DSN, self::DB_USER, self::DB_PASS);
+            self::$db = new PDO(self::DB_DSN, self::DB_USER, self::DB_PASS);
         } catch (Exception $e) {
             die('Error connecting MySQL.');
         }
@@ -25,9 +25,12 @@ class DatabaseConection
      * Function that returns a ready-to-use PDO connection
      * @return PDO
      */
-    public function getConection(): PDO
+    public static function getConection(): PDO
     {
-        return $this->db;
+       if(self::$db === null) {
+        self::connect();
+       }
+       return self::$db;
     }
 }
 
