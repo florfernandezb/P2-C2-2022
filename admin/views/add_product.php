@@ -13,7 +13,7 @@ $PRODUCT_KEYS = [
 ?>
 <form action="actions/add_product_acc.php" method="POST">
     <div class="modal-header">						
-        <h4 class="modal-title">Agregá un producto:</h4>
+        <h2 class="modal-title">Agregá un producto:</h2>
     </div>
     <div class="modal-body">	
         <?php foreach($PRODUCT_KEYS as $formData) { 

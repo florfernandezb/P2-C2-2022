@@ -17,7 +17,7 @@ $PRODUCT_KEYS = [
 ?>
 <form action="actions/edit_product_acc.php?id=<?= $product->getProductId() ?>" method="POST">
     <div class="modal-header">						
-        <h4 class="modal-title">Editá tu producto!</h4>
+        <h2 class="modal-title">Editá tu producto:</h2>
     </div>
     <div class="modal-body">	
         <?php foreach($PRODUCT_KEYS as $formData) { 

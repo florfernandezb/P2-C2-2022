@@ -8,10 +8,10 @@ $color = (new Colors())->getId($id);
 	<div class="col-12 col-md-6">
 		
 
-			<h3>Id:</h3>
+			<h2>Id:</h2>
 			<p><?= $color->getId() ?></p>
 
-			<h3>Nombre del color:</h3>
+			<h2>Nombre del color:</h2>
 			<p><?= $color->getName() ?></p>
 			
 
