@@ -43,7 +43,7 @@
 						<td> <?=  $product->getPrice() ?> </td>
 						<td> <?=  $product->getDate() ?> </td>
                         <td> <?=  $product->getProductDescription() ?> </td>
-                        <td> <?=  $product->getImage() ?> </td>
+                        <td> <img src="<?=  '../res/products/'. $product->getImage() . '.png';?>" alt="Imagen Ilustrativa de <?= $product->getImageDescription() ?>" class="img-fluid rounded"> </td>
                         <td> <?=  $product->getImageDescription() ?> </td>
                         <td> <?=  $product->getMeasurements() ?> </td>
 						<td>
