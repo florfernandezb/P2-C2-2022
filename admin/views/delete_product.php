@@ -49,6 +49,6 @@ $PRODUCT_KEYS = [
     </div>
     <div class="modal-footer">
         <a href="index.php?a=product_crud" type="button" class="btn btnVaciar" data-dismiss="modal" value="Cancelar">Cancelar</a>
-        <input type="submit" class="btn btnFinalizar" value="Guardar">
+        <input type="submit" class="btn btnFinalizar" value="Eliminar">
     </div>
 </form>
