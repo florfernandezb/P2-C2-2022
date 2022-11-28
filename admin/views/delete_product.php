@@ -17,7 +17,7 @@ $PRODUCT_KEYS = [
 ?>
 <form action="actions/delete_product_acc.php?id=<?= $product->getProductId() ?>" method="POST">
     <div class="modal-header">						
-        <h4 class="modal-title">Eliminá tu producto</h4>
+        <h2 class="modal-title">Eliminá tu producto</h2>
     </div>
     <div class="modal-body">	
         <?php foreach($PRODUCT_KEYS as $formData) { 

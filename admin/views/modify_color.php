@@ -9,7 +9,7 @@ $COLOR_KEYS = [
 ?>
 <form action="actions/edit_color_acc.php?id=<?= $color->getId() ?>" method="POST">
     <div class="modal-header">						
-        <h4 class="modal-title">Editá tu producto!</h4>
+        <h2 class="modal-title">Editá el color:</h2>
     </div>
     <div class="modal-body">	
         <?php foreach($COLOR_KEYS as $formData) { 
