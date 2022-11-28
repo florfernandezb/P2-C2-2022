@@ -102,6 +102,40 @@ require_once "DatabaseConection.php";
         return $result['id'];
     }
 
+    public function editProduct(
+        $id,
+        $name, 
+        $price, 
+        $available_date, 
+        $product_description, 
+        $image, 
+        $image_description, 
+        $product_measurements
+    ) {
+        $db = DatabaseConection::getConection();
+        $query = "UPDATE products SET name = :name,
+        price = :price,
+        available_date = :available_date,
+        product_description = :product_description,
+        image = :image,
+        image_description = :image_description,
+        product_measurements = :product_measurements   
+        WHERE id = :id";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute([
+            'id' => $id,
+            'name' => $name,
+            'price' => $price,
+            'available_date' => $available_date,
+            'product_description' => $product_description,
+            'image' => $image,
+            'image_description' => $image_description,
+            'product_measurements' => $product_measurements, 
+        ]);
+    }
+
+
     public function add_product_x_category($idProduct, $categoryId) {
         $db = DatabaseConection::getConection();
 

@@ -47,8 +47,8 @@
                         <td> <?=  $product->getImageDescription() ?> </td>
                         <td> <?=  $product->getMeasurements() ?> </td>
 						<td>
-							<a href="index.php?a=modify_product" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Edit"></i></a>
-							<a href="index.php?a=modify_product" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
+							<a href="index.php?a=modify_product&id=<?= $product->getProductId() ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Edit"></i></a>
+							<a href="index.php?a=delete_product" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="" data-original-title="Delete"></i></a>
 						</td>
 					</tr>
                 <?PHP } ?>

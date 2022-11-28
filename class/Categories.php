@@ -22,6 +22,47 @@ class Categories {
         return $categories;
     }
 
+    public function getCategoriesById($id) {
+
+        $db = DatabaseConection::getConection();
+        $query = "SELECT * FROM categories WHERE id = $id";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
+        $PDOStatement->execute();
+        $category = $PDOStatement->fetch();
+
+        if (!$category) {
+            return null;
+        }
+
+        return $category;
+    }
+
+    public function get_categories_x_product($productId) {
+        $categories = [];
+        $categoriesSelected = [];
+    
+        $db = DatabaseConection::getConection();
+        $query = "SELECT product_id, GROUP_CONCAT(category_id) AS categories FROM product_x_category WHERE product_x_category.product_id= $productId GROUP BY product_x_category.product_id;";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->setFetchMode(PDO::FETCH_ASSOC);
+        $PDOStatement->execute();
+        $categories = $PDOStatement->fetch();
+        
+        if(!empty($categories)) {
+            $values = explode(",", $categories['categories']);  
+       
+            foreach ($values as $category) {
+                array_push($categoriesSelected, $this->getCategoriesById((int)$category));
+            }
+        }
+       
+
+        return $categoriesSelected;
+    }
+
     /**
      * Category id getter
      * @return int
