@@ -135,11 +135,28 @@ require_once "DatabaseConection.php";
         ]);
     }
 
+    public function deleteProduct($id)
+    {
+        $db = DatabaseConection::getConection();
+        $query = "DELETE FROM products WHERE id = $id";
+
+        $PDOStatement = $db -> prepare($query);
+        $PDOStatement -> execute();
+    }
 
     public function add_product_x_category($idProduct, $categoryId) {
         $db = DatabaseConection::getConection();
 
         $query = "INSERT INTO product_x_category VALUES (NULL, $idProduct, $categoryId)";
+
+        $PDOStatement = $db->prepare($query);
+        $PDOStatement->execute();
+    }
+
+    public function delete_product_x_category($idProduct) {
+        $db = DatabaseConection::getConection();
+
+        $query = "DELETE FROM product_x_category WHERE product_id = $idProduct";
 
         $PDOStatement = $db->prepare($query);
         $PDOStatement->execute();

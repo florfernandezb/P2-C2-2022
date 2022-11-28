@@ -15,7 +15,7 @@ $PRODUCT_KEYS = [
     ['label' => 'Medidas del producto', 'type' => 'text', 'id' => 'product_measurements', 'value' => $product->getMeasurements()], 
 ];
 ?>
-<form action="actions/edit_product_acc.php?id=<?= $product->getProductId() ?>" method="POST">
+<form action="actions/delete_product_acc.php?id=<?= $product->getProductId() ?>" method="POST">
     <div class="modal-header">						
         <h4 class="modal-title">Eliminá tu producto</h4>
     </div>
@@ -24,14 +24,14 @@ $PRODUCT_KEYS = [
             ?>				
         <div class="form-group">
             <label><?= $formData['label'] ?></label>
-            <input value="<?= $formData['value'] ?>" type=<?= $formData['type'] ?> class="form-control" id=<?= $formData['id'] ?> name=<?= $formData['id'] ?> >
+            <input value="<?= $formData['value'] ?>" type=<?= $formData['type'] ?> class="form-control" id=<?= $formData['id'] ?> name=<?= $formData['id'] ?> disabled >
         </div>
         <?php } ?>
         <div class="form-group">
 			<label>Categorías</label>
 			<?php foreach($categories as $category) { ?>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="<?= $category->getId() ?>" id="categories" name="categories" 
+					<input class="form-check-input" type="checkbox" value="<?= $category->getId() ?>" disabled id="categories" name="categories" 
 						<?php foreach($categoriesSelectected as $cat) { ?> 
 							<?= $cat->getId() ==  $category->getId() ? "checked" : "" ?>
 						<?php }  ?>
@@ -39,11 +39,16 @@ $PRODUCT_KEYS = [
 					<label class="form-check-label" for="<?= $category->getId() ?>"> <?= $category->getName() ?> </label>
 				</div>
        		<?php }  ?>
+            <?php foreach($categoriesSelectected as $key=>$category) { ?>
+                <div class="col-6">
+                    <input type="text" value="<?= $category->getId() ?>" name="<?= $key ?>" class="btn btn-danger w-100 fw-bold" hidden>
+                </div>
+            <?php }  ?>
         </div>
 		
     </div>
     <div class="modal-footer">
         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-        <input type="submit" class="btn btn-info" value="Save">
+        <input type="submit" class="btn btn-info" value="Eliminar">
     </div>
 </form>

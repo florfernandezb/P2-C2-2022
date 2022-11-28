@@ -114,6 +114,7 @@ class Categories {
             ]
         );
     }
+
     /**
      * Category id getter
      * @return int
